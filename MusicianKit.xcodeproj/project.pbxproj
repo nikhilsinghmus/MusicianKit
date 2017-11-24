@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		241426CB1F8AE276005FC596 /* RomanNumerals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241426CA1F8AE276005FC596 /* RomanNumerals.swift */; };
 		241426CD1F8AE3E7005FC596 /* DurationTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241426CC1F8AE3E7005FC596 /* DurationTools.swift */; };
-		241426CF1F8AE93C005FC596 /* RNLookup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 241426CE1F8AE93C005FC596 /* RNLookup.plist */; };
 		241EB5471F7CF018008B3B31 /* ModalTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241EB5461F7CF018008B3B31 /* ModalTools.swift */; };
 		2429BDA11F8C5F42000606D5 /* ToneRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429BD9D1F8C5F25000606D5 /* ToneRow.swift */; };
 		2429BDA21F8C5F43000606D5 /* PostTonalTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429BD9E1F8C5F25000606D5 /* PostTonalTools.swift */; };
@@ -41,7 +40,6 @@
 /* Begin PBXFileReference section */
 		241426CA1F8AE276005FC596 /* RomanNumerals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumerals.swift; sourceTree = "<group>"; };
 		241426CC1F8AE3E7005FC596 /* DurationTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationTools.swift; sourceTree = "<group>"; };
-		241426CE1F8AE93C005FC596 /* RNLookup.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RNLookup.plist; sourceTree = "<group>"; };
 		241EB5461F7CF018008B3B31 /* ModalTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTools.swift; sourceTree = "<group>"; };
 		2429BD9D1F8C5F25000606D5 /* ToneRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneRow.swift; sourceTree = "<group>"; };
 		2429BD9E1F8C5F25000606D5 /* PostTonalTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTonalTools.swift; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 				2429BDA81F8C6085000606D5 /* OtherTools */,
 				2429BDA61F8C6053000606D5 /* TonalTools */,
 				2429BD9C1F8C5F25000606D5 /* PostTonalTools */,
-				241426CE1F8AE93C005FC596 /* RNLookup.plist */,
 				24372A9A1F7787FB00933B43 /* Info.plist */,
 			);
 			path = MusicianKit;
@@ -267,7 +264,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				241426CF1F8AE93C005FC596 /* RNLookup.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
