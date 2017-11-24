@@ -45,7 +45,7 @@ public struct Tempo {
     public init?(description: String) {
         let descriptionDict: Dictionary<String, CountableRange<Int>> = ["grave": 40..<50, "largo": 50..<55, "larghetto": 55..<60, "adagio": 60..<70, "andante": 70..<85, "moderato": 85..<100, "allegretto": 100..<115, "allegro": 115..<140, "vivace": 140..<150, "presto": 150..<170, "prestissimo": 170..<200]
         
-        guard let range = descriptionDict[description] else { return nil }
+        guard let range = descriptionDict[description.lowercased()] else { return nil }
         self = Tempo(Double(arc4random_uniform(UInt32((range.upperBound - range.lowerBound) + range.lowerBound))))
     }
 }

@@ -19,6 +19,7 @@
 		242FE33D1FA6DC93007BB0DE /* MusicianKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24372A961F7787FB00933B43 /* MusicianKit.framework */; };
 		24372A9B1F7787FB00933B43 /* MusicianKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 24372A991F7787FB00933B43 /* MusicianKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2497F0C21FC7D6FA0002429B /* ForteCodeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2497F0C11FC7D6FA0002429B /* ForteCodeDictionary.swift */; };
+		2497F0C41FC7E7190002429B /* RomanNumeralsDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2497F0C31FC7E7190002429B /* RomanNumeralsDictionary.swift */; };
 		24AAC61B1F7B24F20083006F /* TonalTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AAC61A1F7B24F20083006F /* TonalTools.swift */; };
 		24C7B0DE1FB112490029DA97 /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C7B0DD1FB112490029DA97 /* Chord.swift */; };
 		24C7B0E01FB1129B0029DA97 /* String+ParseChordSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C7B0DF1FB1129B0029DA97 /* String+ParseChordSymbol.swift */; };
@@ -53,6 +54,7 @@
 		24372A991F7787FB00933B43 /* MusicianKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicianKit.h; sourceTree = "<group>"; };
 		24372A9A1F7787FB00933B43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2497F0C11FC7D6FA0002429B /* ForteCodeDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForteCodeDictionary.swift; sourceTree = "<group>"; };
+		2497F0C31FC7E7190002429B /* RomanNumeralsDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumeralsDictionary.swift; sourceTree = "<group>"; };
 		24AAC61A1F7B24F20083006F /* TonalTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TonalTools.swift; sourceTree = "<group>"; };
 		24C7B0DD1FB112490029DA97 /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
 		24C7B0DF1FB1129B0029DA97 /* String+ParseChordSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ParseChordSymbol.swift"; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				241426CA1F8AE276005FC596 /* RomanNumerals.swift */,
+				2497F0C31FC7E7190002429B /* RomanNumeralsDictionary.swift */,
 				24AAC61A1F7B24F20083006F /* TonalTools.swift */,
 				24C7B0DD1FB112490029DA97 /* Chord.swift */,
 				24C7B0DF1FB1129B0029DA97 /* String+ParseChordSymbol.swift */,
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2497F0C41FC7E7190002429B /* RomanNumeralsDictionary.swift in Sources */,
 				241EB5471F7CF018008B3B31 /* ModalTools.swift in Sources */,
 				24C7B0E01FB1129B0029DA97 /* String+ParseChordSymbol.swift in Sources */,
 				24AAC61B1F7B24F20083006F /* TonalTools.swift in Sources */,
