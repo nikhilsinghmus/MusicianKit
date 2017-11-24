@@ -2,7 +2,6 @@
 //  PostTonalTools.swift
 //  MusicianKit
 //
-//  Created by Nikhil Singh on 9/24/17.
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 

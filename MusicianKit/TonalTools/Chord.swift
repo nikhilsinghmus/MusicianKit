@@ -2,7 +2,6 @@
 //  Chord.swift
 //  MusicianKit
 //
-//  Created by Nikhil Singh on 11/6/17.
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
@@ -35,7 +34,8 @@ public struct Chord: Equatable {
     }
     
     public static func parse(_ chordSymbol: String) -> Chord? {
-        return nil
+        guard let c = chordSymbol.separateRoot()?.getPitchClasses() else { return nil }
+        return Chord(pitchClassSet: c)
     }
     
     public init(scaleDegrees: [ScaleDegree]) {
@@ -107,8 +107,11 @@ public struct SeparatedChordSymbol {
     var root: PitchLetter!
     var suffix: String!
     
-    public static func getPitchClasses() -> PCSet? {
-        return nil
+    public func getPitchClasses() -> PCSet? {
+        let rootPC = root.PC
+        let mapped = suffix.mapSuffix()?.pitchClasses.map { ($0 + rootPC) % 12 }
+        guard let PCs = mapped else { return nil }
+        return PCSet(PCs)
     }
     
     public init(_ chordRoot: PitchLetter, _ chordSuffix: String) {

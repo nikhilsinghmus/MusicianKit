@@ -2,7 +2,6 @@
 //  PCSet.swift
 //  MusicianKit
 //
-//  Created by Nikhil Singh on 10/9/17.
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
@@ -121,25 +120,20 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
         return PCSet(thinned)
     }
     
-    public init?(_ forteName: String) {
-        guard let path = Bundle.main.path(forResource: "ForteLookup", ofType: "plist") else { return nil }
-        let forteDict = NSDictionary(contentsOfFile: path)
+    public init?(_ forteCodeName: String) {
+        guard let pcstring = (forteDict.first { $0.value == forteCodeName })?.key else { return nil }
         
-        guard let pcstring = forteDict?.value(forKey: forteName) as? String else { return nil }
-        
-        let split = pcstring.split(separator: " ")
-        self = PCSet(split.map { PitchClass($0) ?? 0 })
+        let split = pcstring.characters.map { String($0) }
+        self = PCSet( split.map { Int($0) ?? (($0 == "A") ? 10 : 11) } )
     }
     
-    public var forteName: String? {
+    public var forteCode: String? {
         var primeString = ""
         let pf = self.getPrimeForm()
-        pf.forEach { primeString.append("\($0)") }
+        pf.forEach { primeString.append(($0 < 10) ? "\($0)" : (($0 == 10) ? "A" : "B")) }
         
-        guard let path = Bundle.main.path(forResource: "ForteLookup", ofType: "plist") else { return nil }
-        let forteDict = NSDictionary(contentsOfFile: path)
-        
-        return forteDict?.allKeys(for: primeString).first as? String
+        let ps = primeString.replacingOccurrences(of: " ", with: "")
+        return forteDict[ps]
     }
     
     public func getNormalForm() -> PCSet {

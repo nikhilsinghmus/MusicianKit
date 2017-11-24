@@ -2,7 +2,6 @@
 //  PitchTools.swift
 //  MusicianKit
 //
-//  Created by Nikhil Singh on 10/8/17.
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
@@ -38,9 +37,11 @@ public enum PitchLetter: Int {
     case B = 11
     static var Ax = PitchLetter.B, Cb = PitchLetter.B
     
-    var PC: Int {
+    public var PC: Int {
         return rawValue
     }
+    
+    public static var all: Dictionary<String, PitchLetter> = ["C": .C, "Bs": .Bs, "Dbb": .Dbb, "Db": .Db, "Cs": .Cs, "Bx": .Bx, "D": .D, "Cx": .Cx, "Ebb": .Ebb, "Eb": .Eb, "Ds": .Ds, "E": .E, "Dx": .Dx, "Fb": .Fb, "F": .F, "Es": .Es, "Gbb": .Gbb, "Gb": .Gb, "Fs": .Fs, "Ex": .Ex, "G": .G, "Fx": .Fx, "Abb": .Abb, "Ab": .Ab, "Gs": .Gs, "Fsx": .Fsx, "A": .A, "Gx": .Gx, "Bbb": .Bbb, "Bb": .Bb, "As": .As, "B": .B, "Ax": .Ax, "Cb": .Cb]
 }
 
 public struct Pitch: Equatable {

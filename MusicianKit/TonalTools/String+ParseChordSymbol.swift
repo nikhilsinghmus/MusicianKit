@@ -2,7 +2,6 @@
 //  String+ParseChordSymbol.swift
 //  MusicianKit
 //
-//  Created by Nikhil Singh on 11/6/17.
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
@@ -30,7 +29,7 @@ public extension String {
         }
         
         if let pl = portion.mapPitchToLetter() {
-            return SeparatedChordSymbol(pl, replacingOccurrences(of: portion, with: ""))
+            return SeparatedChordSymbol(pl, self.replacingOccurrences(of: portion, with: ""))
         }
         
         return nil
@@ -68,6 +67,92 @@ public extension String {
     }
     
     public func mapPitchToLetter() -> PitchLetter? {
-        return nil
+        let stringCopy = self.replacingOccurrences(of: "♭", with: "b").replacingOccurrences(of: "♯", with: "s").replacingOccurrences(of: "#", with: "s")
+        return PitchLetter.all[stringCopy]
+    }
+    
+    public func mapSuffix() -> PCSet? {
+        
+        var offsets = Set<Int>()
+        let s = Array(self).map { String($0) }
+        
+        if s[0] == "7" {
+            [0, 4, 7, 10].forEach { offsets.insert($0) }
+        } else if (s[0] == "m" || s[0] == "-") && self.substring(0, 3) != "maj" {
+            
+            switch s[1] {
+            case "7": offsets.insert(10)
+            case "6": offsets.insert(9)
+            case "9": offsets.insert(2)
+            default: break
+            }
+            
+            if self.contains("b5") {
+                [0, 3, 6].forEach { offsets.insert($0) }
+            } else {
+                [0, 3, 7].forEach { offsets.insert($0) }
+            }
+            
+            if self.substring(1, 4) == "maj" || self.substring(1, 4) == "Maj" {
+                switch (s[4]) {
+                case "7": offsets.insert(11)
+                case "9": [11, 2].forEach { offsets.insert($0) }
+                default: break;
+                }
+            }
+            
+        } else if s[0] == "M" || self.substring(0, 3) == "maj" || self.substring(0, 3) == "Maj" {
+            
+            if s[1] == "7" || s[3] == "7" {
+                offsets.insert(11);
+            } else if (s[1] == "9" || s[3] == "9") {
+                [11, 2].forEach { offsets.insert($0) }
+            }    
+            
+            if self.contains("#5") {
+                [0, 4, 8].forEach { offsets.insert($0) }
+            } else {
+                [0, 4, 7].forEach { offsets.insert($0) }
+            }
+            
+        } else if s[0] == "º" || s[0] == "o" || s[0] == "d" || self.substring(0, 3) == "dim" {
+            [0, 3, 6].forEach { offsets.insert($0) }
+            
+            if (s[1] == "7" || s[3] == "7") {
+                offsets.insert(9);
+            }
+        } else if s[0] == "+" || s[0] == "a" || self.substring(0, 3) == "aug" {
+            [0, 4, 8].forEach { offsets.insert($0) }
+            
+            if self.contains("maj7") || self.contains("Maj7") {
+                offsets.insert(11);
+            } else if self.contains("7") {
+                offsets.insert(10);
+            }
+        }
+        
+        for i in 0 ..< s.count {
+            if s[i] == "#" {
+                switch (s[i+1]) {
+                case "9": offsets.insert(3)
+                case "5": offsets.insert(8); _ = offsets.remove(7)
+                case "1": if s[i+2] == "1" { offsets.insert(6) }
+                default: break
+                }
+            } else if s[i] == "b" {
+                switch (s[i + 1]) {
+                case "9": offsets.insert(1)
+                case "5": offsets.insert(6); _ = offsets.remove(7)
+                case "1": if s[i+2] == "3" { offsets.insert(8) }
+                default: break
+                }
+            }
+        }
+        
+        return PCSet(offsets)
+    }
+    
+    public func substring(_ fromIndex: Int, _ toIndex: Int) -> String {
+        return String(String(self.suffix(self.endIndex.encodedOffset - fromIndex)).prefix(toIndex - fromIndex))
     }
 }

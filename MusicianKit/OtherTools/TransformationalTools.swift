@@ -2,7 +2,6 @@
 //  TransformationalTools.swift
 //  MusicianKit
 //
-//  Created by Nikhil Singh on 10/8/17.
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
@@ -82,7 +81,7 @@ public class TransformationalTools {
         return transform(chord, with: leadingToneFromMajor)
     }
     
-    public static func checkTransformation(from chord: (PitchLetter, ChordQuality), to otherChord: (PitchLetter, ChordQuality)) -> Transformation? {
+    public static func checkSingleTransformation(from chord: (PitchLetter, ChordQuality), to otherChord: (PitchLetter, ChordQuality)) -> Transformation? {
         
         for t in Transformation.allValues {
             if let r = transform(chord, by: t), r == otherChord { return t }

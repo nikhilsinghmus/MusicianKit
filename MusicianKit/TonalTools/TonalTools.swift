@@ -2,7 +2,6 @@
 //  TonalTools.swift
 //  MusicianKit
 //
-//  Created by Nikhil Singh on 9/26/17.
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 

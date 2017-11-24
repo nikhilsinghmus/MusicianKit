@@ -3,6 +3,8 @@
 
 MusicianKit provides a simple API for musical composition, investigation, and more. It doesn't intend to produce audio, but to provide tools with which to construct and work with musical ideas, sequences, and to gather information about the ways in which musical iOS apps are being used through a kind of distributed corpus analysis, where the corpus is a living collection of music being made by iOS musickers.
 
+It is currently essentially in pre-alpha mode.
+
 
 #### Modules, Usage
 

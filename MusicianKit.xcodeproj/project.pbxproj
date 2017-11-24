@@ -18,7 +18,7 @@
 		242FE33B1FA6DC93007BB0DE /* MusicianKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242FE33A1FA6DC93007BB0DE /* MusicianKitTests.swift */; };
 		242FE33D1FA6DC93007BB0DE /* MusicianKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24372A961F7787FB00933B43 /* MusicianKit.framework */; };
 		24372A9B1F7787FB00933B43 /* MusicianKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 24372A991F7787FB00933B43 /* MusicianKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24AAC5551F79A8780083006F /* ForteLookup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24AAC5541F79A8780083006F /* ForteLookup.plist */; };
+		2497F0C21FC7D6FA0002429B /* ForteCodeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2497F0C11FC7D6FA0002429B /* ForteCodeDictionary.swift */; };
 		24AAC61B1F7B24F20083006F /* TonalTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AAC61A1F7B24F20083006F /* TonalTools.swift */; };
 		24C7B0DE1FB112490029DA97 /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C7B0DD1FB112490029DA97 /* Chord.swift */; };
 		24C7B0E01FB1129B0029DA97 /* String+ParseChordSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C7B0DF1FB1129B0029DA97 /* String+ParseChordSymbol.swift */; };
@@ -52,7 +52,7 @@
 		24372A961F7787FB00933B43 /* MusicianKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusicianKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24372A991F7787FB00933B43 /* MusicianKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicianKit.h; sourceTree = "<group>"; };
 		24372A9A1F7787FB00933B43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24AAC5541F79A8780083006F /* ForteLookup.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ForteLookup.plist; sourceTree = "<group>"; };
+		2497F0C11FC7D6FA0002429B /* ForteCodeDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForteCodeDictionary.swift; sourceTree = "<group>"; };
 		24AAC61A1F7B24F20083006F /* TonalTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TonalTools.swift; sourceTree = "<group>"; };
 		24C7B0DD1FB112490029DA97 /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
 		24C7B0DF1FB1129B0029DA97 /* String+ParseChordSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ParseChordSymbol.swift"; sourceTree = "<group>"; };
@@ -85,6 +85,7 @@
 			children = (
 				2429BD9E1F8C5F25000606D5 /* PostTonalTools.swift */,
 				2429BD9F1F8C5F25000606D5 /* PCSet.swift */,
+				2497F0C11FC7D6FA0002429B /* ForteCodeDictionary.swift */,
 				2429BD9D1F8C5F25000606D5 /* ToneRow.swift */,
 				2429BDA01F8C5F25000606D5 /* ToneMatrix.swift */,
 			);
@@ -157,7 +158,6 @@
 				2429BDA61F8C6053000606D5 /* TonalTools */,
 				2429BD9C1F8C5F25000606D5 /* PostTonalTools */,
 				241426CE1F8AE93C005FC596 /* RNLookup.plist */,
-				24AAC5541F79A8780083006F /* ForteLookup.plist */,
 				24372A9A1F7787FB00933B43 /* Info.plist */,
 			);
 			path = MusicianKit;
@@ -265,7 +265,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				241426CF1F8AE93C005FC596 /* RNLookup.plist in Resources */,
-				24AAC5551F79A8780083006F /* ForteLookup.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,16 +286,17 @@
 				241EB5471F7CF018008B3B31 /* ModalTools.swift in Sources */,
 				24C7B0E01FB1129B0029DA97 /* String+ParseChordSymbol.swift in Sources */,
 				24AAC61B1F7B24F20083006F /* TonalTools.swift in Sources */,
+				24E942F01F8ADD12000ABBDA /* NoteTools.swift in Sources */,
 				24E942EE1F8ADCF7000ABBDA /* XenharmonicTools.swift in Sources */,
 				2429BDA11F8C5F42000606D5 /* ToneRow.swift in Sources */,
 				2429BDA31F8C5F46000606D5 /* PCSet.swift in Sources */,
 				2429BDA41F8C5F47000606D5 /* ToneMatrix.swift in Sources */,
 				24C7B0DE1FB112490029DA97 /* Chord.swift in Sources */,
 				2429BDA21F8C5F43000606D5 /* PostTonalTools.swift in Sources */,
-				24E942F01F8ADD12000ABBDA /* NoteTools.swift in Sources */,
 				241426CD1F8AE3E7005FC596 /* DurationTools.swift in Sources */,
 				24E942F21F8ADE38000ABBDA /* TransformationalTools.swift in Sources */,
 				241426CB1F8AE276005FC596 /* RomanNumerals.swift in Sources */,
+				2497F0C21FC7D6FA0002429B /* ForteCodeDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +465,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MusicianKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikhilsingh.MusicianKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -488,6 +489,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MusicianKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikhilsingh.MusicianKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

@@ -2,7 +2,6 @@
 //  ToneRow.swift
 //  MusicianKit
 //
-//  Created by Nikhil Singh on 10/9/17.
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 

@@ -2,7 +2,6 @@
 //  XenharmonicTools.swift
 //  MusicianKit
 //
-//  Created by Nikhil Singh on 10/8/17.
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 

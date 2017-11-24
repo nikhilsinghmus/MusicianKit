@@ -2,7 +2,6 @@
 //  MusicianKitTests.swift
 //  MusicianKitTests
 //
-//  Created by Nikhil Singh on 10/30/17.
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
