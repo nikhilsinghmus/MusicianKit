@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NoteValue Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/NoteValue" class="dashAnchor"></a>
+    <a title="NoteValue Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (68% documented)</p>
+        <p class="header-right"><a href="https://github.com/nikhilsinghmus/musiciankit"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        NoteValue Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Duration.html">Duration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Metered.html">Metered</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Modes.html">Modes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Modes/Major.html">– Major</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Modes/Minor.html">– Minor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PostTonalTools.html">PostTonalTools</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Proportional.html">Proportional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TransformationalTools.html">TransformationalTools</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/XenharmonicTools.html">XenharmonicTools</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:11MusicianKit6RNDicts10DictionaryVyS2SGv">RNDict</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:11MusicianKit9forteDicts10DictionaryVyS2SGv">forteDict</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ChordQuality.html">ChordQuality</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/KeyType.html">KeyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MatrixForm.html">MatrixForm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NoteValue.html">NoteValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PitchLetter.html">PitchLetter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Transformation.html">Transformation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Chord.html">Chord</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Mode.html">Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Note.html">Note</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NoteSequence.html">NoteSequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PCSet.html">PCSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Pitch.html">Pitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RomanNumeral.html">RomanNumeral</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RomanNumeral/Traditional.html">– Traditional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RomanNumeral/Berklee.html">– Berklee</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SeparatedChordSymbol.html">SeparatedChordSymbol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Tempo.html">Tempo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TimeSignature.html">TimeSignature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ToneMatrix.html">ToneMatrix</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ToneRow.html">ToneRow</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>NoteValue</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">NoteValue</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                </div>
+              </div>
+            <p>The <strong>NoteValue</strong> enum type, with a Double rawValue, consists of scaling factors for use as standard durations. Plugged into the equation as described below, they will yield approx. durations (in seconds).</p>
+<pre class="highlight plaintext"><code>seconds = 60/(tempo * (noteValue.rawValue/4))
+</code></pre>
+
+<p>Note that the convention used is <strong>n_4</strong> for a quarter-note, <strong>t_8</strong> for a triplet eighth-note, <strong>d_16</strong> for a dotted sixteenth-note, etc.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO3n_1A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/n_1" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO3n_1A2CmF">n_1</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">n_1</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_2A2CmF">n_2</a></span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_4A2CmF">n_4</a></span> <span class="o">=</span> <span class="mf">4.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_8A2CmF">n_8</a></span> <span class="o">=</span> <span class="mf">8.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_16A2CmF">n_16</a></span> <span class="o">=</span> <span class="mf">16.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_32A2CmF">n_32</a></span> <span class="o">=</span> <span class="mf">32.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_64A2CmF">n_64</a></span> <span class="o">=</span> <span class="mf">64.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO5n_128A2CmF">n_128</a></span> <span class="o">=</span> <span class="mf">128.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO3n_2A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/n_2" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO3n_2A2CmF">n_2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_1A2CmF">n_1</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">n_2</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_4A2CmF">n_4</a></span> <span class="o">=</span> <span class="mf">4.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_8A2CmF">n_8</a></span> <span class="o">=</span> <span class="mf">8.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_16A2CmF">n_16</a></span> <span class="o">=</span> <span class="mf">16.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_32A2CmF">n_32</a></span> <span class="o">=</span> <span class="mf">32.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_64A2CmF">n_64</a></span> <span class="o">=</span> <span class="mf">64.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO5n_128A2CmF">n_128</a></span> <span class="o">=</span> <span class="mf">128.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO3n_4A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/n_4" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO3n_4A2CmF">n_4</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_1A2CmF">n_1</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_2A2CmF">n_2</a></span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">n_4</span> <span class="o">=</span> <span class="mf">4.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_8A2CmF">n_8</a></span> <span class="o">=</span> <span class="mf">8.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_16A2CmF">n_16</a></span> <span class="o">=</span> <span class="mf">16.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_32A2CmF">n_32</a></span> <span class="o">=</span> <span class="mf">32.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_64A2CmF">n_64</a></span> <span class="o">=</span> <span class="mf">64.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO5n_128A2CmF">n_128</a></span> <span class="o">=</span> <span class="mf">128.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO3n_8A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/n_8" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO3n_8A2CmF">n_8</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_1A2CmF">n_1</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_2A2CmF">n_2</a></span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_4A2CmF">n_4</a></span> <span class="o">=</span> <span class="mf">4.0</span><span class="p">,</span> <span class="n">n_8</span> <span class="o">=</span> <span class="mf">8.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_16A2CmF">n_16</a></span> <span class="o">=</span> <span class="mf">16.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_32A2CmF">n_32</a></span> <span class="o">=</span> <span class="mf">32.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_64A2CmF">n_64</a></span> <span class="o">=</span> <span class="mf">64.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO5n_128A2CmF">n_128</a></span> <span class="o">=</span> <span class="mf">128.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO4n_16A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/n_16" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO4n_16A2CmF">n_16</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_1A2CmF">n_1</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_2A2CmF">n_2</a></span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_4A2CmF">n_4</a></span> <span class="o">=</span> <span class="mf">4.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_8A2CmF">n_8</a></span> <span class="o">=</span> <span class="mf">8.0</span><span class="p">,</span> <span class="n">n_16</span> <span class="o">=</span> <span class="mf">16.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_32A2CmF">n_32</a></span> <span class="o">=</span> <span class="mf">32.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_64A2CmF">n_64</a></span> <span class="o">=</span> <span class="mf">64.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO5n_128A2CmF">n_128</a></span> <span class="o">=</span> <span class="mf">128.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO4n_32A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/n_32" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO4n_32A2CmF">n_32</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_1A2CmF">n_1</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_2A2CmF">n_2</a></span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_4A2CmF">n_4</a></span> <span class="o">=</span> <span class="mf">4.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_8A2CmF">n_8</a></span> <span class="o">=</span> <span class="mf">8.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_16A2CmF">n_16</a></span> <span class="o">=</span> <span class="mf">16.0</span><span class="p">,</span> <span class="n">n_32</span> <span class="o">=</span> <span class="mf">32.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_64A2CmF">n_64</a></span> <span class="o">=</span> <span class="mf">64.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO5n_128A2CmF">n_128</a></span> <span class="o">=</span> <span class="mf">128.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO4n_64A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/n_64" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO4n_64A2CmF">n_64</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_1A2CmF">n_1</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_2A2CmF">n_2</a></span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_4A2CmF">n_4</a></span> <span class="o">=</span> <span class="mf">4.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_8A2CmF">n_8</a></span> <span class="o">=</span> <span class="mf">8.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_16A2CmF">n_16</a></span> <span class="o">=</span> <span class="mf">16.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_32A2CmF">n_32</a></span> <span class="o">=</span> <span class="mf">32.0</span><span class="p">,</span> <span class="n">n_64</span> <span class="o">=</span> <span class="mf">64.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO5n_128A2CmF">n_128</a></span> <span class="o">=</span> <span class="mf">128.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO5n_128A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/n_128" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO5n_128A2CmF">n_128</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_1A2CmF">n_1</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_2A2CmF">n_2</a></span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_4A2CmF">n_4</a></span> <span class="o">=</span> <span class="mf">4.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3n_8A2CmF">n_8</a></span> <span class="o">=</span> <span class="mf">8.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_16A2CmF">n_16</a></span> <span class="o">=</span> <span class="mf">16.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_32A2CmF">n_32</a></span> <span class="o">=</span> <span class="mf">32.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4n_64A2CmF">n_64</a></span> <span class="o">=</span> <span class="mf">64.0</span><span class="p">,</span> <span class="n">n_128</span> <span class="o">=</span> <span class="mf">128.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO3t_1A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/t_1" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO3t_1A2CmF">t_1</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">t_1</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_2A2CmF">t_2</a></span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_4A2CmF">t_4</a></span> <span class="o">=</span> <span class="mf">6.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_8A2CmF">t_8</a></span> <span class="o">=</span> <span class="mf">12.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_16A2CmF">t_16</a></span> <span class="o">=</span> <span class="mf">24.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_32A2CmF">t_32</a></span> <span class="o">=</span> <span class="mf">48.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_64A2CmF">t_64</a></span> <span class="o">=</span> <span class="mf">96.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO5t_128A2CmF">t_128</a></span> <span class="o">=</span> <span class="mf">192.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO3t_2A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/t_2" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO3t_2A2CmF">t_2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_1A2CmF">t_1</a></span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">t_2</span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_4A2CmF">t_4</a></span> <span class="o">=</span> <span class="mf">6.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_8A2CmF">t_8</a></span> <span class="o">=</span> <span class="mf">12.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_16A2CmF">t_16</a></span> <span class="o">=</span> <span class="mf">24.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_32A2CmF">t_32</a></span> <span class="o">=</span> <span class="mf">48.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_64A2CmF">t_64</a></span> <span class="o">=</span> <span class="mf">96.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO5t_128A2CmF">t_128</a></span> <span class="o">=</span> <span class="mf">192.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO3t_4A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/t_4" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO3t_4A2CmF">t_4</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_1A2CmF">t_1</a></span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_2A2CmF">t_2</a></span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">t_4</span> <span class="o">=</span> <span class="mf">6.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_8A2CmF">t_8</a></span> <span class="o">=</span> <span class="mf">12.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_16A2CmF">t_16</a></span> <span class="o">=</span> <span class="mf">24.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_32A2CmF">t_32</a></span> <span class="o">=</span> <span class="mf">48.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_64A2CmF">t_64</a></span> <span class="o">=</span> <span class="mf">96.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO5t_128A2CmF">t_128</a></span> <span class="o">=</span> <span class="mf">192.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO3t_8A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/t_8" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO3t_8A2CmF">t_8</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_1A2CmF">t_1</a></span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_2A2CmF">t_2</a></span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_4A2CmF">t_4</a></span> <span class="o">=</span> <span class="mf">6.0</span><span class="p">,</span> <span class="n">t_8</span> <span class="o">=</span> <span class="mf">12.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_16A2CmF">t_16</a></span> <span class="o">=</span> <span class="mf">24.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_32A2CmF">t_32</a></span> <span class="o">=</span> <span class="mf">48.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_64A2CmF">t_64</a></span> <span class="o">=</span> <span class="mf">96.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO5t_128A2CmF">t_128</a></span> <span class="o">=</span> <span class="mf">192.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO4t_16A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/t_16" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO4t_16A2CmF">t_16</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_1A2CmF">t_1</a></span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_2A2CmF">t_2</a></span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_4A2CmF">t_4</a></span> <span class="o">=</span> <span class="mf">6.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_8A2CmF">t_8</a></span> <span class="o">=</span> <span class="mf">12.0</span><span class="p">,</span> <span class="n">t_16</span> <span class="o">=</span> <span class="mf">24.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_32A2CmF">t_32</a></span> <span class="o">=</span> <span class="mf">48.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_64A2CmF">t_64</a></span> <span class="o">=</span> <span class="mf">96.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO5t_128A2CmF">t_128</a></span> <span class="o">=</span> <span class="mf">192.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO4t_32A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/t_32" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO4t_32A2CmF">t_32</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_1A2CmF">t_1</a></span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_2A2CmF">t_2</a></span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_4A2CmF">t_4</a></span> <span class="o">=</span> <span class="mf">6.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_8A2CmF">t_8</a></span> <span class="o">=</span> <span class="mf">12.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_16A2CmF">t_16</a></span> <span class="o">=</span> <span class="mf">24.0</span><span class="p">,</span> <span class="n">t_32</span> <span class="o">=</span> <span class="mf">48.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_64A2CmF">t_64</a></span> <span class="o">=</span> <span class="mf">96.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO5t_128A2CmF">t_128</a></span> <span class="o">=</span> <span class="mf">192.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO4t_64A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/t_64" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO4t_64A2CmF">t_64</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_1A2CmF">t_1</a></span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_2A2CmF">t_2</a></span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_4A2CmF">t_4</a></span> <span class="o">=</span> <span class="mf">6.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_8A2CmF">t_8</a></span> <span class="o">=</span> <span class="mf">12.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_16A2CmF">t_16</a></span> <span class="o">=</span> <span class="mf">24.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_32A2CmF">t_32</a></span> <span class="o">=</span> <span class="mf">48.0</span><span class="p">,</span> <span class="n">t_64</span> <span class="o">=</span> <span class="mf">96.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO5t_128A2CmF">t_128</a></span> <span class="o">=</span> <span class="mf">192.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO5t_128A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/t_128" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO5t_128A2CmF">t_128</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_1A2CmF">t_1</a></span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_2A2CmF">t_2</a></span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_4A2CmF">t_4</a></span> <span class="o">=</span> <span class="mf">6.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO3t_8A2CmF">t_8</a></span> <span class="o">=</span> <span class="mf">12.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_16A2CmF">t_16</a></span> <span class="o">=</span> <span class="mf">24.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_32A2CmF">t_32</a></span> <span class="o">=</span> <span class="mf">48.0</span><span class="p">,</span> <span class="n"><a href="../Enums/NoteValue.html#/s:11MusicianKit9NoteValueO4t_64A2CmF">t_64</a></span> <span class="o">=</span> <span class="mf">96.0</span><span class="p">,</span> <span class="n">t_128</span> <span class="o">=</span> <span class="mf">192.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO3d_1A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/d_1" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO3d_1A2CmF">d_1</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">d_1</span> <span class="o">=</span> <span class="mf">0.6666666666666667</span><span class="p">,</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO3d_2A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/d_2" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO3d_2A2CmF">d_2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">d_2</span> <span class="o">=</span> <span class="mf">1.3333333333333333</span><span class="p">,</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO3d_4A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/d_4" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO3d_4A2CmF">d_4</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">d_4</span> <span class="o">=</span> <span class="mf">2.6666666666666667</span><span class="p">,</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO3d_8A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/d_8" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO3d_8A2CmF">d_8</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">d_8</span> <span class="o">=</span> <span class="mf">5.3333333333333333</span><span class="p">,</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO4d_16A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/d_16" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO4d_16A2CmF">d_16</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">d_16</span> <span class="o">=</span> <span class="mf">10.666666666666667</span><span class="p">,</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO4d_32A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/d_32" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO4d_32A2CmF">d_32</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">d_32</span> <span class="o">=</span> <span class="mf">21.333333333333333</span><span class="p">,</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO4d_64A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/d_64" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO4d_64A2CmF">d_64</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">d_64</span> <span class="o">=</span> <span class="mf">42.666666666666667</span><span class="p">,</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MusicianKit9NoteValueO5d_128A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/d_128" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MusicianKit9NoteValueO5d_128A2CmF">d_128</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">d_128</span> <span class="o">=</span> <span class="mf">85.33333333333333</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="http://nsingh.co" target="_blank" rel="external">Nikhil Singh</a>. All rights reserved. (Last updated: 2017-11-25)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

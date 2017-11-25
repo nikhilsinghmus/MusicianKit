@@ -1,0 +1,579 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 39,
+      "symbol": "NoteValue.n_1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 39,
+      "symbol": "NoteValue.n_128",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 39,
+      "symbol": "NoteValue.n_16",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 39,
+      "symbol": "NoteValue.n_2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 39,
+      "symbol": "NoteValue.n_32",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 39,
+      "symbol": "NoteValue.n_4",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 39,
+      "symbol": "NoteValue.n_64",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 39,
+      "symbol": "NoteValue.n_8",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 40,
+      "symbol": "NoteValue.t_1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 40,
+      "symbol": "NoteValue.t_128",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 40,
+      "symbol": "NoteValue.t_16",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 40,
+      "symbol": "NoteValue.t_2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 40,
+      "symbol": "NoteValue.t_32",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 40,
+      "symbol": "NoteValue.t_4",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 40,
+      "symbol": "NoteValue.t_64",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 40,
+      "symbol": "NoteValue.t_8",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 41,
+      "symbol": "NoteValue.d_1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 42,
+      "symbol": "NoteValue.d_2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 43,
+      "symbol": "NoteValue.d_4",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 44,
+      "symbol": "NoteValue.d_8",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 45,
+      "symbol": "NoteValue.d_16",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 46,
+      "symbol": "NoteValue.d_32",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 47,
+      "symbol": "NoteValue.d_64",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/DurationTools.swift",
+      "line": 48,
+      "symbol": "NoteValue.d_128",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 18,
+      "symbol": "PitchLetter.C",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 20,
+      "symbol": "PitchLetter.Db",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 22,
+      "symbol": "PitchLetter.D",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 24,
+      "symbol": "PitchLetter.Eb",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 26,
+      "symbol": "PitchLetter.E",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 28,
+      "symbol": "PitchLetter.F",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 30,
+      "symbol": "PitchLetter.Gb",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 32,
+      "symbol": "PitchLetter.G",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 34,
+      "symbol": "PitchLetter.Ab",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 36,
+      "symbol": "PitchLetter.A",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 38,
+      "symbol": "PitchLetter.Bb",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 40,
+      "symbol": "PitchLetter.B",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 107,
+      "symbol": "Pitch.~=(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 26,
+      "symbol": "Modes.Major.aeolian",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 26,
+      "symbol": "Modes.Major.dorian",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 26,
+      "symbol": "Modes.Major.ionian",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 26,
+      "symbol": "Modes.Major.locrian",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 26,
+      "symbol": "Modes.Major.lydian",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 26,
+      "symbol": "Modes.Major.mixolydian",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 26,
+      "symbol": "Modes.Major.phrygian",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 27,
+      "symbol": "Modes.Major.first",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 37,
+      "symbol": "Modes.Major.Harmonic.fifth",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 37,
+      "symbol": "Modes.Major.Harmonic.first",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 37,
+      "symbol": "Modes.Major.Harmonic.fourth",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 37,
+      "symbol": "Modes.Major.Harmonic.second",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 37,
+      "symbol": "Modes.Major.Harmonic.seventh",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 37,
+      "symbol": "Modes.Major.Harmonic.sixth",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 37,
+      "symbol": "Modes.Major.Harmonic.third",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 52,
+      "symbol": "Modes.Minor.Harmonic.fifth",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 52,
+      "symbol": "Modes.Minor.Harmonic.first",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 52,
+      "symbol": "Modes.Minor.Harmonic.fourth",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 52,
+      "symbol": "Modes.Minor.Harmonic.second",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 52,
+      "symbol": "Modes.Minor.Harmonic.seventh",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 52,
+      "symbol": "Modes.Minor.Harmonic.sixth",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 52,
+      "symbol": "Modes.Minor.Harmonic.third",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 64,
+      "symbol": "Modes.Minor.Melodic.fifth",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 64,
+      "symbol": "Modes.Minor.Melodic.first",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 64,
+      "symbol": "Modes.Minor.Melodic.fourth",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 64,
+      "symbol": "Modes.Minor.Melodic.second",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 64,
+      "symbol": "Modes.Minor.Melodic.seventh",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 64,
+      "symbol": "Modes.Minor.Melodic.sixth",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/ModalTools.swift",
+      "line": 64,
+      "symbol": "Modes.Minor.Melodic.third",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
+      "line": 118,
+      "symbol": "Transformation.H",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
+      "line": 118,
+      "symbol": "Transformation.L",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
+      "line": 118,
+      "symbol": "Transformation.N",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
+      "line": 118,
+      "symbol": "Transformation.P",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
+      "line": 118,
+      "symbol": "Transformation.R",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
+      "line": 118,
+      "symbol": "Transformation.S",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
+      "line": 128,
+      "symbol": "ChordQuality.augmented",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
+      "line": 128,
+      "symbol": "ChordQuality.diminished",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
+      "line": 128,
+      "symbol": "ChordQuality.major",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
+      "line": 128,
+      "symbol": "ChordQuality.minor",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/PostTonalTools/PostTonalTools.swift",
+      "line": 72,
+      "symbol": "MatrixForm.i",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/PostTonalTools/PostTonalTools.swift",
+      "line": 72,
+      "symbol": "MatrixForm.p",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/PostTonalTools/PostTonalTools.swift",
+      "line": 72,
+      "symbol": "MatrixForm.r",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/PostTonalTools/PostTonalTools.swift",
+      "line": 72,
+      "symbol": "MatrixForm.ri",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/TonalTools/TonalTools.swift",
+      "line": 14,
+      "symbol": "KeyType.major",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/TonalTools/TonalTools.swift",
+      "line": 14,
+      "symbol": "KeyType.minor",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/nikhilsingh/MusicianKit"
+}
