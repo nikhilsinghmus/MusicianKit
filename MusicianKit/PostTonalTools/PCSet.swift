@@ -7,21 +7,86 @@
 
 import Foundation
 
+/**
+ The **PCSet** type deals with collections of pitch-classes. It abstracts an Array of pitch-classes than a set type, in order to allow for duplicates, explicit ordering, etc.
+ */
 public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebra {
-    public var isEmpty: Bool {
-        return pitchClasses.count == 0
+    
+    /// Underlying PitchClass array.
+    public var pitchClasses = [PitchClass]()
+    
+    public typealias ArrayLiteralElement = PitchClass
+    public subscript(position: Int) -> Int {
+        get {
+            return pitchClasses[position]
+        }
+        set(newValue) {
+            pitchClasses[position] = newValue
+        }
     }
     
-    public func contains(_ member: Int) -> Bool {
-        return pitchClasses.contains(member)
+    public static func ==(lhs: PCSet, rhs: PCSet) -> Bool {
+        return lhs.pitchClasses == rhs.pitchClasses
     }
     
-    public mutating func update(with newMember: Int) -> Int? {
-        let newPC = abs(newMember) % 12
-        pitchClasses.append(newPC)
-        return newPC
+    // MARK: Initializers
+    /// Initialize an empty pitch-class set.
+    public init() {
+        pitchClasses = []
     }
     
+    /// Initialize from a Set of PitchClasses.
+    public init(_ set: Set<PitchClass>) {
+        pitchClasses = [PitchClass](set.sorted())
+    }
+    
+    /// Initialize from an array of MIDI note numbers.
+    public init(with midiNotes: [UInt8]) {
+        pitchClasses = midiNotes.map { PitchClass($0 % 12) }
+    }
+    
+    /** Initialize as an array literal of PitchClasses. For example:
+    ```
+    let set: PCSet = [0, 1, 4, 5, 8, 11]
+    ```
+     */
+    public init(arrayLiteral elements: PitchClass...) {
+        pitchClasses = elements.map { $0 % 12 }
+    }
+    
+    /// Initialize from an Array of PitchClasses.
+    public init(_ pcSetLiteral: [PitchClass]) {
+        pitchClasses = pcSetLiteral.map { $0 % 12 }
+    }
+    
+    /// Initialize from an ArraySlice of PitchClasses.
+    public init(_ pcSetSlice: ArraySlice<PitchClass>) {
+        pitchClasses = Array<PitchClass>(pcSetSlice)
+    }
+    
+    /// Initialize from a Forte code string. E.g. PCSet("4-Z15") returns [0, 1, 4, 6]
+    public init?(_ forteCodeName: String) {
+        guard let pcstring = (forteDict.first { $0.value == forteCodeName })?.key else { return nil }
+        
+        let split = pcstring.characters.map { String($0) }
+        self = PCSet( split.map { Int($0) ?? (($0 == "A") ? 10 : 11) } )
+    }
+    
+    /// Returns the number of unique elements in the current PCSet instance.
+    public var cardinality: Int {
+        return thinned().pitchClasses.count
+    }
+    
+    // MARK: Indexing
+    public func index(after i: Int) -> Int {
+        return i + 1
+    }
+    public var startIndex: Int = 0
+    public var endIndex: Int {
+        return pitchClasses.count
+    }
+    
+    // MARK: SetAlgebra methods
     public func union(_ other: PCSet) -> PCSet {
         var pcs = self.pitchClasses
         pcs.append(contentsOf: other.pitchClasses)
@@ -39,17 +104,6 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
         return union
     }
     
-    public mutating func insert(_ newMember: Int) -> (inserted: Bool, memberAfterInsert: Int) {
-        let next = pitchClasses.first
-        pitchClasses.insert(newMember, at: 0)
-        return (inserted: true, memberAfterInsert: next ?? -1)
-    }
-    
-    public mutating func remove(_ member: Int) -> Int? {
-        guard let loc = pitchClasses.index(of: member) else { return nil }
-        return pitchClasses.remove(at: loc)
-    }
-    
     public mutating func formUnion(_ other: PCSet) {
         self = union(other)
     }
@@ -62,54 +116,33 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
         self = symmetricDifference(other)
     }
     
-    public init() {
-        pitchClasses = []
+    public mutating func insert(_ newMember: Int) -> (inserted: Bool, memberAfterInsert: Int) {
+        let next = pitchClasses.first
+        pitchClasses.insert(newMember, at: 0)
+        return (inserted: true, memberAfterInsert: next ?? -1)
     }
     
-    public init(_ set: Set<PitchClass>) {
-        pitchClasses = [PitchClass](set.sorted())
+    public mutating func remove(_ member: Int) -> Int? {
+        guard let loc = pitchClasses.index(of: member) else { return nil }
+        return pitchClasses.remove(at: loc)
     }
     
-    public subscript(position: Int) -> Int {
-        get {
-            return pitchClasses[position]
-        }
-        set(newValue) {
-            pitchClasses[position] = newValue
-        }
+    public var isEmpty: Bool {
+        return pitchClasses.count == 0
     }
     
-    public typealias ArrayLiteralElement = PitchClass
-    public var pitchClasses: [PitchClass] = []
-    public var cardinality: Int {
-        return thinned().pitchClasses.count
+    public func contains(_ member: Int) -> Bool {
+        return pitchClasses.contains(member)
     }
     
-    public func index(after i: Int) -> Int {
-        return i + 1
+    public mutating func update(with newMember: Int) -> Int? {
+        let newPC = abs(newMember) % 12
+        pitchClasses.append(newPC)
+        return newPC
     }
     
-    public var startIndex: Int = 0
-    public var endIndex: Int {
-        return pitchClasses.count
-    }
-    
-    public init(arrayLiteral elements: PitchClass...) {
-        pitchClasses = elements.map { $0 % 12 }
-    }
-    
-    public init(_ pcSetLiteral: [PitchClass]) {
-        pitchClasses = pcSetLiteral.map { $0 % 12 }
-    }
-    
-    public init(_ pcSetSlice: ArraySlice<PitchClass>) {
-        pitchClasses = Array<PitchClass>(pcSetSlice)
-    }
-    
-    public static func ==(lhs: PCSet, rhs: PCSet) -> Bool {
-        return lhs.pitchClasses == rhs.pitchClasses
-    }
-    
+    // MARK: Utility methods
+    /// Returns an ordered replica of the current PCSet with duplicates removed.
     public func thinned() -> PCSet {
         var unique: Set<PitchClass> = []
         let thinned = pitchClasses.filter {
@@ -120,13 +153,7 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
         return PCSet(thinned)
     }
     
-    public init?(_ forteCodeName: String) {
-        guard let pcstring = (forteDict.first { $0.value == forteCodeName })?.key else { return nil }
-        
-        let split = pcstring.characters.map { String($0) }
-        self = PCSet( split.map { Int($0) ?? (($0 == "A") ? 10 : 11) } )
-    }
-    
+    /// Returns the Forte code of the current PCSet if one can be found that matches.
     public var forteCode: String? {
         var primeString = ""
         let pf = self.getPrimeForm()
@@ -136,6 +163,7 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
         return forteDict[ps]
     }
     
+    /// Returns the normal form of the current PCSet.
     public func getNormalForm() -> PCSet {
         var st = self.thinned().sorted()
         st.append(st[0] + 12)
@@ -151,6 +179,7 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
         return PCSet(st[ldIndex ..< count] + st[0 ..< ldIndex])
     }
     
+    /// Returns the prime form of the current PCSet.
     public func getPrimeForm() -> PCSet {
         let nf = self.getNormalForm()
         let rev: PCSet = nf.inverted().getNormalForm()
@@ -168,30 +197,32 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
         return weight1 < weight2 ? option1 : option2
     }
     
-    public init(with midiNotes: [Int]) {
-        pitchClasses = midiNotes.map { $0 % 12 }
-    }
-    
+    /// Returns an inversion of the current PCSet.
     public func inverted() -> PCSet {
         return PCSet(map { (12 - $0) % 12 })
     }
     
+    /// Inverts the current PCSet.
     public mutating func invert() {
         self = inverted()
     }
     
+    /// Returns a transposition of the current PCSet.
     public func transposed(_ t: Int) -> PCSet {
         return PCSet(map { ($0 + t) % 12 })
     }
     
+    /// Transposes the current PCSet.
     public mutating func transpose(_ t: Int) {
         self = transposed(t)
     }
     
+    /// Returns a transposition and/or inversion of the current PCSet.
     public func transformed(t: Int, i: Bool) -> PCSet {
         return i ? inverted().transposed(t).getNormalForm() : transposed(t)
     }
     
+    /// Performs a compound transformation (inversion and transposition) on the current PCSet.
     public mutating func transform(t: Int, i: Bool) {
         self = transformed(t: t, i: i)
     }

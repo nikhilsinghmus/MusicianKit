@@ -1,4 +1,4 @@
-## MusicianKit
+# MusicianKit
 ##### A framework for musical software-development and analytics on iOS devices.
 
 MusicianKit provides a simple API for musical composition, investigation, and more. It doesn't intend to produce audio, but to provide tools with which to construct and work with musical ideas, sequences, and to gather information about the ways in which musical iOS apps are being used through a kind of distributed corpus analysis, where the corpus is a living collection of music being made by iOS musickers.
@@ -6,7 +6,7 @@ MusicianKit provides a simple API for musical composition, investigation, and mo
 It is currently essentially in **pre-alpha** mode.
 
 
-#### Modules, Usage
+## Modules, Usage
 
 Below are a few examples of various modules or areas of functionality (in various degrees of completeness) for which APIs are provided.
 
@@ -83,7 +83,7 @@ let offset = XenharmonicTools.EDOGetIncrement(24)
 ```
 Many more usage examples (and Swift playground) to follow.
 
-#### Current Limitations, Future Plans
+## Current Limitations, Future Plans
 
 MusicianKit is currently a relatively small and modular framework, as it relates to certain kinds of musical work (inevitably informed by my own biases). My hope is that other musicians and musical domain experts will contribute new modules that relate to their work and interests, perhaps building on what's already there or adding new ways of working, or porting it to other platforms of interest, etc.
 

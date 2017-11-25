@@ -5,22 +5,23 @@
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public typealias PitchClass = Int
 
-public enum MatrixForm {
-    case p, i, r, ri
-}
-
+/**
+ **PostTonalTools** is an abstract class and a toolkit for dealing with post-tonal music-theoretic and compositional conventions, including musical group theory, tone rows and matrices, etc.
+ */
 open class PostTonalTools {
+    private init() { } // Abstract class
     
     private static let notes: Dictionary<String, Int> = ["C": 0, "D": 2, "E": 4, "F": 5, "G": 7, "A": 9, "B": 11]
-
-    public static func nn2n(_ noteNames: [String]) -> [PitchClass?] {
+    
+    private static func nn2n(_ noteNames: [String]) -> [PitchClass?] {
         return noteNames.flatMap { noteMap($0) }
     }
     
+    /// Map a note name to a pitch-class (0 - 11). Returns nil if a direct mapping cannot be found. E.g. noteMap("F") returns 5.
     public static func noteMap(_ noteName: String) -> PitchClass? {
         var ext = noteName.uppercased()
         let letter = ext.characters.popFirst()
@@ -40,6 +41,7 @@ open class PostTonalTools {
         return note
     }
     
+    /// Map a note name to a pitch-class (0 - 23) in 24EDO. Returns nil if a direct mapping cannot be found. Uses '+' for quarter-tone-sharp, and 'd' for quarter-tone-flat. E.g. noteMap24("Fd") returns 9, noteMap24("G+") returns 15, noteMap24("A") returns 18.
     public static func noteMap24(_ noteName: String) -> PitchClass? {
         var ext = noteName.uppercased()
         let letter = ext.characters.popFirst()
@@ -63,3 +65,9 @@ open class PostTonalTools {
     }
 }
 
+/**
+ **MatrixForm** is an enum to help navigate ToneMatrix objects. The four forms available are p, i, r, and ri, corresponding to Prime, Inversion, Retrograde, and Retrograde-Inversion respectively.
+ */
+public enum MatrixForm {
+    case p, i, r, ri
+}

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// A dictionary mapping traditional roman numeral symbols to offset collections (as strings). Used for lookup internally by RomanNumeral.Traditional.
 public let RNDict: Dictionary<String, String> = ["I": "0 4 7",
                                                  "I6": "4 7 12",
                                                  "I64": "7 12 16",
@@ -120,4 +121,3 @@ public let RNDict: Dictionary<String, String> = ["I": "0 4 7",
                                                  "It6": "8 12 18",
                                                  "Fr6": "8 12 14 18",
                                                  "Ger6": "8 12 15 18"]
-

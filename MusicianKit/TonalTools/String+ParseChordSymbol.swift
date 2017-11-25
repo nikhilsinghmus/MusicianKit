@@ -7,7 +7,9 @@
 
 import Foundation
 
+/// Extensions to the String type to enable parsing chord symbols in a functional style.
 public extension String {
+    /// Separate a chord symbol's root from its suffix in a string and return both in a SeparatedChordSymbol instance.
     public func separateRoot() -> SeparatedChordSymbol? {
         let accidental = String(prefix(2)).suffix(1)
         let extAccidental = String(prefix(3)).suffix(2)
@@ -35,6 +37,7 @@ public extension String {
         return nil
     }
     
+    /// Map a string containing a pitch-letter to a pitch-class.
     public func mapPitch() -> PitchClass? {
         var initialPC = 0
         var stringCopy = self
@@ -66,11 +69,13 @@ public extension String {
         return initialPC
     }
     
+    /// Map a string containing a pitch-letter to a PitchLetter instance.
     public func mapPitchToLetter() -> PitchLetter? {
         let stringCopy = self.replacingOccurrences(of: "♭", with: "b").replacingOccurrences(of: "♯", with: "s").replacingOccurrences(of: "#", with: "s")
         return PitchLetter.all[stringCopy]
     }
     
+    /// Parse a chord symbol's suffix and get a pitch-class set from it as it would apply to C (pitch-class 0). E.g. "m7".mapSuffix().
     public func mapSuffix() -> PCSet? {
         
         var offsets = Set<Int>()
@@ -152,6 +157,7 @@ public extension String {
         return PCSet(offsets)
     }
     
+    /// Helper function to get substrings using a JavaScript-like interface.
     public func substring(_ fromIndex: Int, _ toIndex: Int) -> String {
         return String(String(self.suffix(self.endIndex.encodedOffset - fromIndex)).prefix(toIndex - fromIndex))
     }
