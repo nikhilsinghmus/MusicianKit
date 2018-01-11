@@ -5,6 +5,37 @@
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
+extension CountableClosedRange where Bound == Int {
+    init?(tempo: String) {
+        switch tempo {
+        case "grave":
+            self = 40...50
+        case "largo":
+            self = 50...55
+        case "larghetto":
+            self = 55...60
+        case "adagio":
+            self = 60...70
+        case "andante":
+            self = 70...85
+        case "moderato":
+            self = 85...100
+        case "allegretto":
+            self = 100...115
+        case "allegro":
+            self = 115...140
+        case "vivace":
+            self = 140...150
+        case "presto":
+            self = 150...170
+        case "prestissimo":
+            self = 170...200
+        default:
+            return nil
+        }
+    }
+}
+
 /**
  The **TimeSignature** type consists of a numerator and a denominator, together representing a time signature. It currently only supports dyadic rationals, but support for 'irrational' time signatures is planned.
  */
@@ -77,9 +108,8 @@ public struct Tempo {
     
     /// Initialize from a string describing the tempo, e.g. Tempo("Presto"). Generates a random value within a range (e.g. 115 - 140 for "Allegro").
     public init?(description: String) {
-        let descriptionDict: [String: CountableClosedRange<Int>] = ["grave": 40...50, "largo": 50...55, "larghetto": 55...60, "adagio": 60...70, "andante": 70...85, "moderato": 85...100, "allegretto": 100...115, "allegro": 115...140, "vivace": 140...150, "presto": 150...170, "prestissimo": 170...200]
-        
-        guard let range = descriptionDict[description.lowercased()] else { return nil }
+
+        guard let range = CountableClosedRange<Int>(tempo: description) else { return nil }
         self = Tempo(Double(arc4random_uniform(UInt32((range.upperBound - range.lowerBound) + range.lowerBound))))
     }
 }
@@ -122,7 +152,7 @@ open class Metered: Duration {
         get {
             return tempo.BPM
         }
-            
+
         set(newValue) {
             tempo = Tempo(newValue)
         }
