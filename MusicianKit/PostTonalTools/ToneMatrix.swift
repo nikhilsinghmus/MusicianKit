@@ -46,7 +46,7 @@ public struct ToneMatrix: Equatable, ExpressibleByArrayLiteral, MutableCollectio
             return rows[index]
         }
         
-        set(newValue) {
+        set {
             rows[index] = ToneRow(newValue.map { $0 % 12 })
         }
     }

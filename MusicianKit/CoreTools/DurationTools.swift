@@ -139,7 +139,7 @@ open class Metered: Duration {
         get {
             return meter
         }
-        set(newValue) {
+        set {
             meter = newValue
         }
     }
@@ -153,7 +153,7 @@ open class Metered: Duration {
             return tempo.BPM
         }
 
-        set(newValue) {
+        set {
             tempo = Tempo(newValue)
         }
     }

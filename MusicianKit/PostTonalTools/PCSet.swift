@@ -18,7 +18,7 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
         get {
             return pitchClasses[position]
         }
-        set(newValue) {
+        set {
             pitchClasses[position] = newValue
         }
     }

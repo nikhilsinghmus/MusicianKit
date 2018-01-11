@@ -46,7 +46,7 @@ public struct ToneRow: Equatable, ExpressibleByArrayLiteral, MutableCollection {
             return notes[index]
         }
         
-        set(newValue) {
+        set {
             notes[index] = newValue
         }
     }
