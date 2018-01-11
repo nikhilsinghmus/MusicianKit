@@ -5,6 +5,15 @@
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
+extension Sequence where Iterator.Element: Hashable {
+    internal func unique() -> [Iterator.Element] {
+        var s: Set<Iterator.Element> = []
+        return filter {
+            s.insert($0).inserted
+        }
+    }
+}
+
 /**
  The **PCSet** type deals with collections of pitch-classes. It abstracts an Array of pitch-classes than a set type, in order to allow for duplicates, explicit ordering, etc.
  */
@@ -142,13 +151,7 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
     // MARK: Utility methods
     /// Returns an ordered replica of the current PCSet with duplicates removed.
     public func thinned() -> PCSet {
-        var unique: Set<PitchClass> = []
-        let thinned = pitchClasses.filter {
-            guard !unique.contains($0) else { return false }
-            unique.insert($0)
-            return true
-        }
-        return PCSet(thinned)
+        return PCSet(pitchClasses.unique())
     }
 
     /// Returns the Forte code of the current PCSet if one can be found that matches.
