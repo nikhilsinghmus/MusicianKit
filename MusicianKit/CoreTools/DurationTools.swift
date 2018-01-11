@@ -41,9 +41,13 @@ extension CountableClosedRange where Bound == Int {
  */
 public struct TimeSignature {
     /// The underlying numerator.
-    public var numerator: UInt8 = 4
+    public let numerator: UInt8
     /// The underlying denominator.
-    public var denominator: UInt8 = 4
+    public let denominator: UInt8
+
+    public init?() {
+        self.init(4, 4)
+    }
 
     /// Initialize from a numerator and a denominator, e.g. TimeSignature(4, 4).
     public init?(_ count: UInt8, _ value: UInt8) {
