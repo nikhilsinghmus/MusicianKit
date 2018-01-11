@@ -12,7 +12,7 @@ import UIKit
  */
 public enum KeyType {
     case major, minor
-    
+
     /// Semitonal offset pattern from 0 for the current instance.
     public var pattern: [Int] {
         return (self == .major) ? [0, 2, 4, 5, 7, 9, 11] : [0, 2, 3, 5, 7, 8, 10]

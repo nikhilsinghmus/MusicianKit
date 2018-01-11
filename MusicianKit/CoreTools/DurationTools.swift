@@ -44,12 +44,12 @@ public struct TimeSignature {
     public var numerator: UInt8 = 4
     /// The underlying denominator.
     public var denominator: UInt8 = 4
-    
+
     /// Initialize from a numerator and a denominator, e.g. TimeSignature(4, 4).
     public init?(_ count: UInt8, _ value: UInt8) {
         let x = log2(Double(value))
         guard x == floor(x) else { return nil } // Ensure meter is a dyadic rational. No 'irrational' meter implementation (yet!)
-        
+
         numerator = count
         denominator = value
     }
@@ -57,11 +57,11 @@ public struct TimeSignature {
 
 /**
  The **NoteValue** enum type, with a Double rawValue, consists of scaling factors for use as standard durations. Plugged into the equation as described below, they will yield approx. durations (in seconds).
- 
+
  ```
  seconds = 60/(tempo * (noteValue.rawValue/4))
  ```
- 
+
  Note that the convention used is **n_4** for a quarter-note, **t_8** for a triplet eighth-note, **d_16** for a dotted sixteenth-note, etc.
  */
 public enum NoteValue: Double {
@@ -87,25 +87,25 @@ public struct Tempo {
             softLimit = abs(softLimit)
         }
     }
-    
+
     /// The number of beats per minute.
     public var BPM: Double = 120
-    
+
     /// The value of each beat.
     public var value: NoteValue = .n_4
-    
+
     /// Initialize with a note value and a BPM value, e.g. Tempo(.d_4, 140).
     public init(_ noteValue: NoteValue, _ initialBPM: Double) {
         value = noteValue
         BPM = min(abs(initialBPM), Tempo.softLimit)
     }
-    
+
     /// Initialize with a BPM value alone, e.g. Tempo(116.5). Beat value defaults to .n_4, or a quarter-note.
     public init(_ initialBPM: Double) {
         value = .n_4
         BPM = min(abs(initialBPM), Tempo.softLimit)
     }
-    
+
     /// Initialize from a string describing the tempo, e.g. Tempo("Presto"). Generates a random value within a range (e.g. 115 - 140 for "Allegro").
     public init?(description: String) {
 
@@ -120,7 +120,7 @@ public struct Tempo {
 open class Duration: Equatable {
     /// The most recent absolute-time interval represented by an instance.
     public var lastInterval: TimeInterval = 1.0
-    
+
     public static func ==(lhs: Duration, rhs: Duration) -> Bool {
         return lhs.lastInterval == rhs.lastInterval
     }
@@ -133,7 +133,7 @@ open class Duration: Equatable {
 open class Metered: Duration {
     /// The underlying meter.
     public var meter: TimeSignature? = TimeSignature(4, 4)
-    
+
     /// A computed property that reflects the meter property, provided for convenience.
     public var timeSignature: TimeSignature? {
         get {
@@ -143,10 +143,10 @@ open class Metered: Duration {
             meter = newValue
         }
     }
-    
+
     /// The underlying tempo.
     public var tempo = Tempo(120)
-    
+
     /// A computed property that reflects the tempo's beats-per-minute value, provided for convenience.
     public var BPM: Double {
         get {
@@ -157,14 +157,14 @@ open class Metered: Duration {
             tempo = Tempo(newValue)
         }
     }
-    
+
     /// A NoteValue instance to easily change duration to another regular metric subdivision.
     public var noteValue: NoteValue = .n_4 {
         didSet {
             lastInterval = TimeInterval(60.0/(tempo.BPM * (noteValue.rawValue/tempo.value.rawValue)))
         }
     }
-    
+
     /// Initialize with a tempo, a meter, and a beat value.
     public init(initialTempo: Tempo, initialMeter: TimeSignature, initialValue: NoteValue) {
         tempo = initialTempo
@@ -179,21 +179,21 @@ open class Metered: Duration {
 open class Proportional: Duration {
     /// The underlying base absolute-time interval which is scaled.
     public var baseSeconds: TimeInterval = 1.0
-    
+
     /// Initialize from a base absolute-time interval, also setting the lastInterval property to this interval initially.
     public init(baseInterval: TimeInterval) {
         super.init()
         baseSeconds = abs(baseInterval)
         lastInterval = baseSeconds
     }
-    
+
     /// Initialize from a base absolute-time interval and an initial scaling factor.
     public init(baseInterval: TimeInterval, scalingFactor: Double) {
         super.init()
         baseSeconds = abs(baseInterval)
         lastInterval =  baseSeconds * scalingFactor
     }
-    
+
     /// Rescale the current instance's lastInterval property. Also returns the new absolute-time interval, which can be discarded.
     @discardableResult
     public func scale(by scalingFactor: Double) -> TimeInterval {
