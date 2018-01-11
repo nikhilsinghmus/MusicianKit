@@ -10,20 +10,22 @@
  */
 public struct ToneMatrix: Equatable, ExpressibleByArrayLiteral, MutableCollection {
 
+    public typealias Element = ToneRow
+
     public static func ==(lhs: ToneMatrix, rhs: ToneMatrix) -> Bool {
         return lhs.rows == rhs.rows
     }
 
     /// The underlying array of ToneRows.
-    public var rows: [ToneRow]!
+    public var rows: [Element]!
 
     // MARK: Initializers
-    public init(arrayLiteral: ToneRow...) {
+    public init(arrayLiteral: Element...) {
         rows = arrayLiteral
     }
 
     /// Initialize from a ToneRow instance.
-    public init(from row: ToneRow) {
+    public init(from row: Element) {
         rows = [ToneRow](repeating: row, count: row.count)
         for pc in row {
             rows[pc] = ToneRow(row.map { ($0 + (row.count - row[pc])) % row.count })
@@ -35,8 +37,6 @@ public struct ToneMatrix: Equatable, ExpressibleByArrayLiteral, MutableCollectio
         return i + 1
     }
 
-    public typealias ArrayLiteralElement = ToneRow
-
     public var startIndex: Int {
         return 0
     }
@@ -45,7 +45,7 @@ public struct ToneMatrix: Equatable, ExpressibleByArrayLiteral, MutableCollectio
         return rows.count
     }
 
-    public subscript(_ index: Int) -> ToneRow {
+    public subscript(_ index: Int) -> Element {
         get {
             return rows[index]
         }
@@ -57,21 +57,17 @@ public struct ToneMatrix: Equatable, ExpressibleByArrayLiteral, MutableCollectio
 
     // MARK: Utility methods
     /// Get a prticular row form from the matrix.
-    public func rowForm(_ form: MatrixForm, offset: Int) -> ToneRow? {
+    public func rowForm(_ form: MatrixForm, offset: Int) -> Element {
         return rowFormNon12(form, offset: offset, ed: (12, 2))
     }
 
     /// Get a prticular row form from the matrix in an arbitrary equal division of the octave/diapason.
-    public func rowFormNon12(_ form: MatrixForm, offset: Int, ed: ED) -> ToneRow? {
-        var row: ToneRow?
-
+    public func rowFormNon12(_ form: MatrixForm, offset: Int, ed: ED) -> Element {
         switch form {
-        case .p: row = ToneRow([0].map { ($0 + offset) % ed.0 })
-        case .r: row = ToneRow(self[0].map { ($0 + offset) % ed.0 }.reversed())
-        case .i: row = ToneRow(self.map { ($0[0] + offset) % ed.0 })
-        case .ri: row = ToneRow(self.map { ($0[0] + offset) % ed.0 }.reversed())
+        case .p: return ToneRow([0].map { ($0 + offset) % ed.0 })
+        case .r: return ToneRow(self[0].map { ($0 + offset) % ed.0 }.reversed())
+        case .i: return ToneRow(self.map { ($0[0] + offset) % ed.0 })
+        case .ri: return ToneRow(self.map { ($0[0] + offset) % ed.0 }.reversed())
         }
-
-        return row
     }
 }
