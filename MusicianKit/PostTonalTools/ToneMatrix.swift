@@ -36,7 +36,11 @@ public struct ToneMatrix: Equatable, ExpressibleByArrayLiteral, MutableCollectio
     }
 
     public typealias ArrayLiteralElement = ToneRow
-    public var startIndex: Int = 0
+
+    public var startIndex: Int {
+        return 0
+    }
+
     public var endIndex: Int {
         return rows.count
     }

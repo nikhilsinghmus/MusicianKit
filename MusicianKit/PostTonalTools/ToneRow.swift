@@ -34,8 +34,14 @@ public struct ToneRow: Equatable, ExpressibleByArrayLiteral, MutableCollection {
 
     // MARK: Indexing
     public typealias ArrayLiteralElement = PitchClass
-    public var startIndex: Int = 0
-    public var endIndex: Int { return notes.cardinality }
+
+    public var startIndex: Int {
+        return 0
+    }
+
+    public var endIndex: Int {
+        return notes.cardinality
+    }
 
     public func index(after i: Int) -> Int {
         return i + 1
