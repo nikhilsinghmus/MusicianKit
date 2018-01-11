@@ -5,8 +5,6 @@
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
-import Foundation
-
 /// Extensions to the String type to enable parsing chord symbols in a functional style.
 public extension String {
     /// Separate a chord symbol's root from its suffix in a string and return both in a SeparatedChordSymbol instance.

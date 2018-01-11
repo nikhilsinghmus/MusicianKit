@@ -5,8 +5,6 @@
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
-import Foundation
-
 /**
  The **Chord** type provides an abstraction for dealing with vertically-oriented harmonic structures. Can be initialized with a pitch-class set, with a chord symbol (e.g. Chord("Fmaj7#11")), or with MIDI note numbers as an Int array. Chord parity, considering inversional equivalence, can be checked using the == operator.
  */

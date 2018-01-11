@@ -5,8 +5,6 @@
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
-import Foundation
-
 /**
  **Modes** is an abstract class that deals with standard modal collections as well as cataloguing user-generated scales. E.g. Modes.Major.fourth.offsets gives offsets-from-tonic for the lydian mode as an array of Ints, i.e. [0, 2, 4, 6, 7, 9, 11].
  */

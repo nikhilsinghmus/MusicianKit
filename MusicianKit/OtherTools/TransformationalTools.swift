@@ -5,8 +5,6 @@
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
-import Foundation
-
 /**
  **TransformationalTools** is an abstract class and a toolkit for dealing with neo-riemannian and transformational ideas in musical composition and analysis.
  */

@@ -5,8 +5,6 @@
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
-import Foundation
-
 /**
  The **ToneMatrix** type deals with tone matrices expressed as multidimensional arrays, or arrays of ToneRow instances.
  */

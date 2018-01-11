@@ -5,8 +5,6 @@
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
-import Foundation
-
 /**
  The **ToneRow** type deals with ordered collections of pitch-classes and adds utility methods for working with tone rows in compositional contexts.
  */

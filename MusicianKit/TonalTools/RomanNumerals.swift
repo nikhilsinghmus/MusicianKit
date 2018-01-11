@@ -5,8 +5,6 @@
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
-import Foundation
-
 /**
  The **RomanNumeral** type abstracts data and operations related to working with roman-numeral expressions of harmony. Two basic systems of roman-numerals are provided: 'Traditional' and 'Berklee', the former employing figured-bass notation and both upper and lower case characters, and the latter resembling chord symbols and using all upper case characters.
  */

@@ -5,8 +5,6 @@
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
-import Foundation
-
 /// A dictionary mapping pitch-class sets as strings to Forte code strings. Used for lookup internally by PCSet. 'A' refers to pitch-class 10, and 'B' refers to pitch-class 11.
 public var forteDict: Dictionary<String, String> = ["012": "3-1",
                                                     "013": "3-2",

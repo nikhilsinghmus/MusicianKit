@@ -5,8 +5,6 @@
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
-import Foundation
-
 /**
  The **TimeSignature** type consists of a numerator and a denominator, together representing a time signature. It currently only supports dyadic rationals, but support for 'irrational' time signatures is planned.
  */

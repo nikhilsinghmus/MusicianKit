@@ -5,8 +5,6 @@
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
-import Foundation
-
 /**
  The **PCSet** type deals with collections of pitch-classes. It abstracts an Array of pitch-classes than a set type, in order to allow for duplicates, explicit ordering, etc.
  */
