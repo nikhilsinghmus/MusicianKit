@@ -45,14 +45,14 @@ public struct Chord: Equatable {
 
     /// Initialize from a chord symbol. E.g. Chord("Gbm7").
     public init?(_ chordSymbol: String) {
-        guard let chord = Chord.parse(chordSymbol) else { return nil }
+        guard let chord = Chord(parse: chordSymbol) else { return nil }
         self = chord
     }
 
     /// Parse a chord symbol and return an Optional<Chord>. Returns nil if the chord symbol could not be parsed.
-    public static func parse(_ chordSymbol: String) -> Chord? {
+    public init?(parse chordSymbol: String) {
         guard let c = chordSymbol.separateRoot()?.pitchClasses() else { return nil }
-        return Chord(pitchClassSet: c)
+        self.init(pitchClassSet: c)
     }
 
     // MARK: Utility methods
