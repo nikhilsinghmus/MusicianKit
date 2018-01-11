@@ -53,12 +53,12 @@ public struct ToneMatrix: Equatable, ExpressibleByArrayLiteral, MutableCollectio
 
     // MARK: Utility methods
     /// Get a prticular row form from the matrix.
-    public func getRowForm(_ form: MatrixForm, offset: Int) -> ToneRow? {
-        return getRowFormNon12(form, offset: offset, ed: (12, 2))
+    public func rowForm(_ form: MatrixForm, offset: Int) -> ToneRow? {
+        return rowFormNon12(form, offset: offset, ed: (12, 2))
     }
 
     /// Get a prticular row form from the matrix in an arbitrary equal division of the octave/diapason.
-    public func getRowFormNon12(_ form: MatrixForm, offset: Int, ed: ED) -> ToneRow? {
+    public func rowFormNon12(_ form: MatrixForm, offset: Int, ed: ED) -> ToneRow? {
         var row: ToneRow?
 
         switch form {

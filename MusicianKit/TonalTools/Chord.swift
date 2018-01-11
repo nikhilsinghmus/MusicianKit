@@ -51,7 +51,7 @@ public struct Chord: Equatable {
 
     /// Parse a chord symbol and return an Optional<Chord>. Returns nil if the chord symbol could not be parsed.
     public static func parse(_ chordSymbol: String) -> Chord? {
-        guard let c = chordSymbol.separateRoot()?.getPitchClasses() else { return nil }
+        guard let c = chordSymbol.separateRoot()?.pitchClasses() else { return nil }
         return Chord(pitchClassSet: c)
     }
 
@@ -116,7 +116,7 @@ public struct SeparatedChordSymbol {
     }
 
     /// Get a pitch-class set of the suffix as it would apply to C (pitch-class 0).
-    public func getPitchClasses() -> PCSet? {
+    public func pitchClasses() -> PCSet? {
         let rootPC = root.PC
         let mapped = suffix.mapSuffix()?.pitchClasses.map { ($0 + rootPC) % 12 }
         guard let PCs = mapped else { return nil }

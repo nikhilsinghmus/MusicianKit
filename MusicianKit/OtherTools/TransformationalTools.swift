@@ -23,31 +23,31 @@ public class TransformationalTools {
         switch chord.1 {
         case .major:
             switch transformation {
-            case .P: return getParallel(chord)
-            case .R: return getRelative(chord)
-            case .L: return getLeadingTone(chord)
+            case .P: return parallel(chord)
+            case .R: return relative(chord)
+            case .L: return leadingTone(chord)
             case .N:
-                if let c = getRelative(chord) {
-                    if let c = getLeadingTone(c) {
-                        if let c = getParallel(c) {
+                if let c = relative(chord) {
+                    if let c = leadingTone(c) {
+                        if let c = parallel(c) {
                             return c
                         }
                     }
                 }
                 return nil
             case .S:
-                if let c = getLeadingTone(chord) {
-                    if let c = getParallel(c) {
-                        if let c = getRelative(c) {
+                if let c = leadingTone(chord) {
+                    if let c = parallel(c) {
+                        if let c = relative(c) {
                             return c
                         }
                     }
                 }
                 return nil
             case .H:
-                if let c = getLeadingTone(chord) {
-                    if let c = getParallel(c) {
-                        if let c = getLeadingTone(c) {
+                if let c = leadingTone(chord) {
+                    if let c = parallel(c) {
+                        if let c = leadingTone(c) {
                             return c
                         }
                     }
@@ -62,7 +62,7 @@ public class TransformationalTools {
     }
 
     /// Perform a P transformation on some triad represented by a tuplet containing a root and a chord quality.
-    public static func getParallel(_ chord: (PitchLetter, ChordQuality)) -> (PitchLetter, ChordQuality)? {
+    public static func parallel(_ chord: (PitchLetter, ChordQuality)) -> (PitchLetter, ChordQuality)? {
         switch chord.1 {
         case .major: return (chord.0, ChordQuality.minor)
         case .minor: return (chord.0, ChordQuality.major)
@@ -71,12 +71,12 @@ public class TransformationalTools {
     }
 
     /// Perform a R transformation on some triad represented by a tuplet containing a root and a chord quality.
-    public static func getRelative(_ chord: (PitchLetter, ChordQuality)) -> (PitchLetter, ChordQuality)? {
+    public static func relative(_ chord: (PitchLetter, ChordQuality)) -> (PitchLetter, ChordQuality)? {
         return transform(chord, with: relativeFromMajor)
     }
 
     /// Perform an L transformation on some triad represented by a tuplet containing a root and a chord quality.
-    public static func getLeadingTone(_ chord: (PitchLetter, ChordQuality)) -> (PitchLetter, ChordQuality)? {
+    public static func leadingTone(_ chord: (PitchLetter, ChordQuality)) -> (PitchLetter, ChordQuality)? {
         return transform(chord, with: leadingToneFromMajor)
     }
 
