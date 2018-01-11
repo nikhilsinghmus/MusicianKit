@@ -18,11 +18,12 @@ extension Sequence where Iterator.Element: Hashable {
  The **PCSet** type deals with collections of pitch-classes. It abstracts an Array of pitch-classes than a set type, in order to allow for duplicates, explicit ordering, etc.
  */
 public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebra {
+    public typealias Element = PitchClass
 
     /// Underlying PitchClass array.
-    public var pitchClasses = [PitchClass]()
+    public var pitchClasses = [Element]()
 
-    public typealias ArrayLiteralElement = PitchClass
+
     public subscript(position: Int) -> Int {
         get {
             return pitchClasses[position]
@@ -43,7 +44,7 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
     }
 
     /// Initialize from a Set of PitchClasses.
-    public init(_ set: Set<PitchClass>) {
+    public init(_ set: Set<Element>) {
         pitchClasses = [PitchClass](set.sorted())
     }
 
@@ -57,17 +58,17 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
     let set: PCSet = [0, 1, 4, 5, 8, 11]
     ```
      */
-    public init(arrayLiteral elements: PitchClass...) {
+    public init(arrayLiteral elements: Element...) {
         pitchClasses = elements.map { $0 % 12 }
     }
 
     /// Initialize from an Array of PitchClasses.
-    public init(_ pcSetLiteral: [PitchClass]) {
+    public init(_ pcSetLiteral: [Element]) {
         pitchClasses = pcSetLiteral.map { $0 % 12 }
     }
 
     /// Initialize from an ArraySlice of PitchClasses.
-    public init(_ pcSetSlice: ArraySlice<PitchClass>) {
+    public init(_ pcSetSlice: ArraySlice<Element>) {
         pitchClasses = Array(pcSetSlice)
     }
 
@@ -127,13 +128,13 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
         self = symmetricDifference(other)
     }
 
-    public mutating func insert(_ newMember: Int) -> (inserted: Bool, memberAfterInsert: Int) {
+    public mutating func insert(_ newMember: Element) -> (inserted: Bool, memberAfterInsert: Element) {
         let next = pitchClasses.first
         pitchClasses.insert(newMember, at: 0)
         return (inserted: true, memberAfterInsert: next ?? -1)
     }
 
-    public mutating func remove(_ member: Int) -> Int? {
+    public mutating func remove(_ member: Element) -> Int? {
         guard let loc = pitchClasses.index(of: member) else { return nil }
         return pitchClasses.remove(at: loc)
     }
@@ -142,11 +143,11 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
         return pitchClasses.count == 0
     }
 
-    public func contains(_ member: Int) -> Bool {
+    public func contains(_ member: Element) -> Bool {
         return pitchClasses.contains(member)
     }
 
-    public mutating func update(with newMember: Int) -> Int? {
+    public mutating func update(with newMember: Element) -> Element? {
         let newPC = abs(newMember) % 12
         pitchClasses.append(newPC)
         return newPC
