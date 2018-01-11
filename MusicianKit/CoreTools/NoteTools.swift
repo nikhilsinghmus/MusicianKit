@@ -139,28 +139,25 @@ public struct Note: Equatable {
  The **NoteSequence** abstraction represents an ordered collection of **Note** objects.
  */
 public struct NoteSequence: ExpressibleByArrayLiteral {
-    public typealias ArrayLiteralElement = Note
+    public typealias Element = Note
 
     /// The underlying array of **Note** objects.
-    public var notes = [Note]()
+    public var notes: [Element]
 
     /// Variadic initializer from Note objects.
-    public init(arrayLiteral elements: Note...) {
+    public init(arrayLiteral elements: Element...) {
         notes = elements
     }
 
     /// Initialize from a single duration and single velocity applied to multiple pitches.
     public init(duration: Duration, velocity: UInt8, pitches: [Pitch]) {
-        for p in pitches {
-            notes.append(Note(p, duration, velocity))
-        }
+        notes = pitches.map { Note($0, duration, velocity) }
     }
 
     /// Initialize from a single duration and single velocity applied to multiple pitches.
     public init(durations: [Duration], velocities: [UInt8], pitches: [Pitch]) {
-        for i in 0 ..< [durations.count, velocities.count, pitches.count].min()! {
-            notes.append(Note.init(pitches[i], durations[i], velocities[i]))
-        }
+        let cnt = min(durations.count, velocities.count, pitches.count)
+        notes = (0..<cnt).map { Note(pitches[$0], durations[$0], velocities[$0]) }
     }
 
     /// Export NoteSequence instance as a **MusicSequence** object. Needs testing.

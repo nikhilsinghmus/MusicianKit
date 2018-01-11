@@ -23,7 +23,7 @@ public struct RomanNumeral {
     public struct Traditional {
         /// All available roman numeral strings as an array of strings.
         public static var options: [String] {
-            return RNDict.keys.map { String($0) }
+            return Array(RNDict.keys)
         }
 
         /// Offsets-from-tonic for the current instance (values can be > 12).

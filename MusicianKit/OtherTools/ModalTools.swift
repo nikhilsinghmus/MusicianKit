@@ -77,10 +77,10 @@ open class Modes {
  */
 public struct Mode {
     /// Custom mode/scale name.
-    public var name = ""
+    public let name: String
 
     /// Custom mode/scale offsets-from-tonic.
-    public var offsets = [Int]()
+    public let offsets: [Int]
 
     /// Initialize from a name string and offsets-from-tonic Int array.
     public init(modeName: String, modeOffsets: [Int]) {

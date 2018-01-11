@@ -123,4 +123,3 @@ public enum Transformation {
 public enum ChordQuality {
     case major, minor, diminished, augmented
 }
-
