@@ -92,7 +92,7 @@ public struct Mode {
     /// Initialize from a name string and a pitch-class set (the prime form of which is used).
     public init(modeName: String, pcset: PCSet) {
         name = modeName
-        let temp = pcset.getPrimeForm()
+        let temp = pcset.primeForm()
         offsets = temp.map { $0 - temp[0] }
         Modes.user[name] = self
     }

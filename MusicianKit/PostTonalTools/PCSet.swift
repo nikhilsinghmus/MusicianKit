@@ -157,7 +157,7 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
     /// Returns the Forte code of the current PCSet if one can be found that matches.
     public var forteCode: String? {
         var primeString = ""
-        let pf = self.getPrimeForm()
+        let pf = self.primeForm()
         pf.forEach { primeString.append(($0 < 10) ? "\($0)" : (($0 == 10) ? "A" : "B")) }
 
         let ps = primeString.replacingOccurrences(of: " ", with: "")
@@ -165,7 +165,7 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
     }
 
     /// Returns the normal form of the current PCSet.
-    public func getNormalForm() -> PCSet {
+    public func normalForm() -> PCSet {
         var st = self.thinned().sorted()
         st.append(st[0] + 12)
         var largestDiff = 0, ldIndex = 0
@@ -181,9 +181,9 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
     }
 
     /// Returns the prime form of the current PCSet.
-    public func getPrimeForm() -> PCSet {
-        let nf = self.getNormalForm()
-        let rev: PCSet = nf.inverted().getNormalForm()
+    public func primeForm() -> PCSet {
+        let nf = self.normalForm()
+        let rev: PCSet = nf.inverted().normalForm()
         let option1 = PCSet(nf.map { ((12 + $0) - nf[0]) % 12 })
         let option2 = PCSet(rev.map { ((12 + $0) - rev[0]) % 12 })
 
@@ -220,7 +220,7 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
 
     /// Returns a transposition and/or inversion of the current PCSet.
     public func transformed(t: Int, i: Bool) -> PCSet {
-        return i ? inverted().transposed(t).getNormalForm() : transposed(t)
+        return i ? inverted().transposed(t).normalForm() : transposed(t)
     }
 
     /// Performs a compound transformation (inversion and transposition) on the current PCSet.
