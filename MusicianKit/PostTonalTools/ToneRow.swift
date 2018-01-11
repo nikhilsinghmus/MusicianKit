@@ -9,16 +9,18 @@
  The **ToneRow** type deals with ordered collections of pitch-classes and adds utility methods for working with tone rows in compositional contexts.
  */
 public struct ToneRow: Equatable, ExpressibleByArrayLiteral, MutableCollection {
+    public typealias Index = Int
+    public typealias Element = PitchClass
 
     public static func ==(lhs: ToneRow, rhs: ToneRow) -> Bool {
         return lhs.notes == rhs.notes
     }
 
     /// The underlying pitch-class set.
-    public var notes: PCSet!
+    private var notes: PCSet
 
     // MARK: Initializers
-    public init(arrayLiteral: PitchClass...) {
+    public init(arrayLiteral: Element...) {
         notes = PCSet(arrayLiteral)
     }
 
@@ -28,30 +30,27 @@ public struct ToneRow: Equatable, ExpressibleByArrayLiteral, MutableCollection {
     }
 
     /// Initialize from an array of PitchClasses.
-    public init(_ pitchClasses: [PitchClass]) {
+    public init(_ pitchClasses: [Element]) {
         notes = PCSet(pitchClasses)
     }
 
     // MARK: Indexing
-    public typealias ArrayLiteralElement = PitchClass
-
-    public var startIndex: Int {
+    public var startIndex: Index {
         return 0
     }
 
-    public var endIndex: Int {
+    public var endIndex: Index {
         return notes.cardinality
     }
 
-    public func index(after i: Int) -> Int {
+    public func index(after i: Index) -> Index {
         return i + 1
     }
 
-    public subscript(_ index: Int) -> PitchClass {
+    public subscript(_ index: Index) -> Element {
         get {
             return notes[index]
         }
-
         set {
             notes[index] = newValue
         }
