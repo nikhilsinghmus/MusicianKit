@@ -68,7 +68,7 @@ public struct PCSet: Equatable, ExpressibleByArrayLiteral, Collection, SetAlgebr
 
     /// Initialize from an ArraySlice of PitchClasses.
     public init(_ pcSetSlice: ArraySlice<PitchClass>) {
-        pitchClasses = Array<PitchClass>(pcSetSlice)
+        pitchClasses = Array(pcSetSlice)
     }
 
     /// Initialize from a Forte code string. E.g. PCSet("4-Z15") returns [0, 1, 4, 6]

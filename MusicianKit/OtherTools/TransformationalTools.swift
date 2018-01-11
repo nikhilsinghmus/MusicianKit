@@ -90,7 +90,7 @@ public class TransformationalTools {
         return nil
     }
 
-    private static func transform(_ chord: (PitchLetter, ChordQuality), with lookupDict: Dictionary<PitchLetter, PitchLetter>) -> (PitchLetter, ChordQuality)? {
+    private static func transform(_ chord: (PitchLetter, ChordQuality), with lookupDict: [PitchLetter: PitchLetter]) -> (PitchLetter, ChordQuality)? {
         var newQuality = ChordQuality.major
         var newRoot = PitchLetter.C
 
