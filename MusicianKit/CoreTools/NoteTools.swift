@@ -56,7 +56,7 @@ public enum PitchLetter: Int {
     }
     
     /// A dictionary to map strings to PitchLetter cases.
-    public static var all: Dictionary<String, PitchLetter> = ["C": .C, "Bs": .Bs, "Dbb": .Dbb, "Db": .Db, "Cs": .Cs, "Bx": .Bx, "D": .D, "Cx": .Cx, "Ebb": .Ebb, "Eb": .Eb, "Ds": .Ds, "E": .E, "Dx": .Dx, "Fb": .Fb, "F": .F, "Es": .Es, "Gbb": .Gbb, "Gb": .Gb, "Fs": .Fs, "Ex": .Ex, "G": .G, "Fx": .Fx, "Abb": .Abb, "Ab": .Ab, "Gs": .Gs, "Fsx": .Fsx, "A": .A, "Gx": .Gx, "Bbb": .Bbb, "Bb": .Bb, "As": .As, "B": .B, "Ax": .Ax, "Cb": .Cb]
+    public static let all: [String: PitchLetter] = ["C": .C, "Bs": .Bs, "Dbb": .Dbb, "Db": .Db, "Cs": .Cs, "Bx": .Bx, "D": .D, "Cx": .Cx, "Ebb": .Ebb, "Eb": .Eb, "Ds": .Ds, "E": .E, "Dx": .Dx, "Fb": .Fb, "F": .F, "Es": .Es, "Gbb": .Gbb, "Gb": .Gb, "Fs": .Fs, "Ex": .Ex, "G": .G, "Fx": .Fx, "Abb": .Abb, "Ab": .Ab, "Gs": .Gs, "Fsx": .Fsx, "A": .A, "Gx": .Gx, "Bbb": .Bbb, "Bb": .Bb, "As": .As, "B": .B, "Ax": .Ax, "Cb": .Cb]
 }
 
 /**
@@ -150,7 +150,7 @@ public struct NoteSequence: ExpressibleByArrayLiteral {
     }
     
     /// Initialize from a single duration and single velocity applied to multiple pitches.
-    public init(duration: Duration, velocity: UInt8,  pitches: [Pitch]) {
+    public init(duration: Duration, velocity: UInt8, pitches: [Pitch]) {
         for p in pitches {
             notes.append(Note(p, duration, velocity))
         }
