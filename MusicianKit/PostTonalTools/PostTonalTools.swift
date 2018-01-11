@@ -13,7 +13,7 @@ public typealias PitchClass = Int
 open class PostTonalTools {
     private init() { } // Abstract class
     
-    private static let notes: Dictionary<String, Int> = ["C": 0, "D": 2, "E": 4, "F": 5, "G": 7, "A": 9, "B": 11]
+    private static let notes: [String: Int] = ["C": 0, "D": 2, "E": 4, "F": 5, "G": 7, "A": 9, "B": 11]
     
     private static func nn2n(_ noteNames: [String]) -> [PitchClass?] {
         return noteNames.flatMap { noteMap($0) }

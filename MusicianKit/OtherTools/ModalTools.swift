@@ -12,7 +12,7 @@ open class Modes {
     private init() { } // Abstract class
     
     /// A dictionary containing user-defined modes. The key is the mode name.
-    public static var user: Dictionary<String, Mode> = [:]
+    public static var user: [String: Mode] = [:]
     
     /// Get offsets for an arbitrary mode of a base collection of offsets.
     public static func modalRotate(_ baseType: [Int], by amount: Int) -> [Int] {
