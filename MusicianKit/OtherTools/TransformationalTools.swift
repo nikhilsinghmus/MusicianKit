@@ -83,11 +83,9 @@ public class TransformationalTools {
     /// Attempt to identify a single standard transformational mapping between two triads.
     public static func checkSingleTransformation(from chord: (PitchLetter, ChordQuality), to otherChord: (PitchLetter, ChordQuality)) -> Transformation? {
 
-        for t in Transformation.allValues {
-            if let r = transform(chord, by: t), r == otherChord { return t }
+         return Transformation.allValues.first {
+            transform(chord, by: $0).map { $0 == otherChord } ?? false
         }
-
-        return nil
     }
 
     private static func transform(_ chord: (PitchLetter, ChordQuality), with lookupDict: [PitchLetter: PitchLetter]) -> (PitchLetter, ChordQuality)? {
@@ -125,3 +123,4 @@ public enum Transformation {
 public enum ChordQuality {
     case major, minor, diminished, augmented
 }
+
