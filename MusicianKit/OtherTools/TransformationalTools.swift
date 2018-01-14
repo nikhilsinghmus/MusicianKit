@@ -5,6 +5,17 @@
 //  Copyright © 2017 Nikhil Singh. All rights reserved.
 //
 
+precedencegroup Monadic {
+    associativity: left
+    higherThan: AssignmentPrecedence
+    lowerThan: LogicalDisjunctionPrecedence
+}
+
+infix operator >>-: Monadic
+public func >>- <T, U>(a: T?, f: (T) -> U?) -> U? {
+    return a.flatMap(f)
+}
+
 /**
  **TransformationalTools** is an abstract class and a toolkit for dealing with neo-riemannian and transformational ideas in musical composition and analysis.
  */
@@ -15,7 +26,7 @@ public class TransformationalTools {
     public static let relativeFromMajor: [PitchLetter: PitchLetter] = [.C: .A, .Bs: .Gx, .Dbb: .Bbb, .Db: .Bb, .Cs: .As, .D: .B, .Cx: .Ax, .Ebb: .Cb, .Eb: .C, .Ds: .Bs, .E: .Cs, .Dx: .Bx, .Fb: .Db, .F: .D, .Es: .Cx, .Gbb: .Ebb, .Gb: .Eb, .Fs: .Ds, .G: .E, .Fx: .Dx, .Abb: .Fb, .Ab: .F, .Gs: .Es, .A: .Fs, .Gx: .Ex, .Bbb: .Gb, .Bb: .G, .As: .Fsx, .B: .Gs, .Ax: .Fx, .Cb: .Ab]
 
     /// Dictionary mapping roots for the L transformation from major.
-    public static let leadingToneFromMajor: [PitchLetter: PitchLetter] = [.C: .A, .Bs: .Gx, .Dbb: .Bbb, .Db: .Bb, .Cs: .As, .D: .B, .Cx: .Ax, .Ebb: .Cb, .Eb: .C, .Ds: .Bs, .E: .Cs, .Dx: .Bx, .Fb: .Db, .F: .D, .Es: .Cx, .Gbb: .Ebb, .Gb: .Eb, .Fs: .Ds, .G: .E, .Fx: .Dx, .Abb: .Fb, .Ab: .F, .Gs: .Es, .A: .Fs, .Gx: .Ex, .Bbb: .Gb, .Bb: .G, .As: .Fsx, .B: .Gs, .Ax: .Fx, .Cb: .Ab]
+    public static let leadingToneFromMajor: [PitchLetter: PitchLetter] = [.C: .E, .Bs: .Dx, .Dbb: .Fb, .Db: .F, .Cs: .Es, .D: .Fs, .Cx: .Ex, .Ebb: .Gb, .Eb: .G, .Ds: .Fx, .E: .Gs, .Dx: .Fsx, .Fb: .Ab, .F: .A, .Es: .Gx, .Gbb: .Bbb, .Gb: .Bb, .Fs: .As, .G: .B, .Fx: .Ax, .Abb: .Cb, .Ab: .C, .Gs: .Bs, .A: .Cs, .Gx: .Bx, .Bbb: .Db, .Bb: .D, .As: .Cx, .B: .Ds, .Ax: .Csx, .Cb: .Eb]
 
     /// Perform a standard transformation on some triad represented by a tuplet containing a root and a chord quality. Available transformations are cases in the **Transformation** enum: P, L, R, N, S, H.
     public static func transform(_ chord: (PitchLetter, ChordQuality), by transformation: Transformation) -> (PitchLetter, ChordQuality)? {
@@ -26,33 +37,9 @@ public class TransformationalTools {
             case .P: return parallel(chord)
             case .R: return relative(chord)
             case .L: return leadingTone(chord)
-            case .N:
-                if let c = relative(chord) {
-                    if let c = leadingTone(c) {
-                        if let c = parallel(c) {
-                            return c
-                        }
-                    }
-                }
-                return nil
-            case .S:
-                if let c = leadingTone(chord) {
-                    if let c = parallel(c) {
-                        if let c = relative(c) {
-                            return c
-                        }
-                    }
-                }
-                return nil
-            case .H:
-                if let c = leadingTone(chord) {
-                    if let c = parallel(c) {
-                        if let c = leadingTone(c) {
-                            return c
-                        }
-                    }
-                }
-                return nil
+            case .N: return chord >>- relative >>- leadingTone >>- parallel
+            case .S: return chord >>- leadingTone >>- parallel >>- relative
+            case .H: return chord >>- leadingTone >>- parallel >>- leadingTone
             }
         case .minor: break
         default: break

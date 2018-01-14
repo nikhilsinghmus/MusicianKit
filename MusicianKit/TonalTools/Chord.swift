@@ -58,12 +58,12 @@ public struct Chord: Equatable {
     // MARK: Utility methods
     /// Convert from pitch-class to scale-degree.
     public func toScaleDegree(from pc: PitchClass) -> ScaleDegree? {
-        return key.1.pattern.map { ($0 + key.0.rawValue) % 12 }.index(of: pc)
+        return key.1.pattern.map { ($0 + key.0.PC) % 12 }.index(of: pc)
     }
 
     /// Convert from scale-degree to pitch-class.
     public func toPitchClass(from degree: ScaleDegree) -> PitchClass {
-        return key.1.pattern.map { ($0 + key.0.rawValue) % 12 }[degree]
+        return key.1.pattern.map { ($0 + key.0.PC) % 12 }[degree]
     }
 
     /// Use the **Chord** abstraction to voice-lead from one set of MIDI note numbers to another. E.g. Chord.voiceLead(from: [60, 64, 67], to: Chord("Fmaj7")).

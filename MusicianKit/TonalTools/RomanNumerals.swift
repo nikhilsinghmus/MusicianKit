@@ -156,7 +156,7 @@ public struct RomanNumeral {
 
         /// Returns a pitch-class set corresponding to the current roman numeral instance, as it applies to the specified key (may negate inversion).
         public func pitchClasses(in key: Key) -> PCSet? {
-            return PCSet(offsets.map { ($0 + key.rawValue) % 12 })
+            return PCSet(offsets.map { ($0 + key.PC) % 12 })
         }
 
         /// Map a roman numeral's offsets to a particular key and octave, in the style of MIDI note numbers.

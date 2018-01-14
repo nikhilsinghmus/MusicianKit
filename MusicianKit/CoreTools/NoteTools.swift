@@ -14,31 +14,19 @@ public typealias Key = PitchLetter
 /**
  The **PitchLetter** type is an enum whose raw value is the pitch class. The convention used is Cs for C-sharp, and Eb for E-flat, etc. Note that these are octave-invariant abstractions, like pitch-classes but for more tonal contexts.
  */
-public enum PitchLetter: Int {
-    case C = 0
-    static var Bs = PitchLetter.C, Dbb = PitchLetter.C
-    case Db = 1
-    static var Cs = PitchLetter.Db, Bx = PitchLetter.Db
-    case D = 2
-    static var Cx = PitchLetter.D, Ebb = PitchLetter.D
-    case Eb = 3
-    static var Ds = PitchLetter.Eb
-    case E  = 4
-    static var Dx = PitchLetter.E, Fb = PitchLetter.E
-    case F = 5
-    static var Es = PitchLetter.E, Gbb = PitchLetter.E
-    case Gb = 6
-    static var Fs = PitchLetter.Gb, Ex = PitchLetter.Gb
-    case G = 7
-    static var Fx = PitchLetter.G, Abb = PitchLetter.G
-    case Ab = 8
-    static var Gs = PitchLetter.Ab, Fsx = PitchLetter.Ab
-    case A = 9
-    static var Gx = PitchLetter.A, Bbb = PitchLetter.A
-    case Bb = 10
-    static var As = PitchLetter.Bb
-    case B = 11
-    static var Ax = PitchLetter.B, Cb = PitchLetter.B
+public enum PitchLetter {
+    case C, Bs, Dbb
+    case Db, Cs, Bx
+    case D, Cx, Ebb
+    case Eb, Ds, Csx
+    case E , Dx, Fb
+    case F, Es, Gbb
+    case Gb, Fs, Ex
+    case G, Fx, Abb
+    case Ab, Gs, Fsx
+    case A, Gx, Bbb
+    case Bb, As, Gsx
+    case B, Ax, Cb
 
     /// Initialize a PitchLetter instance from a string describing it. E.g. PitchLetter("C#").
     public init?(_ letter: String) {
@@ -52,7 +40,20 @@ public enum PitchLetter: Int {
 
     /// The pitch class value of a PitchLetter case instance.
     public var PC: Int {
-        return rawValue
+        switch self {
+        case .C, .Bs, .Dbb: return 0
+        case .Db, .Cs, .Bx: return 1
+        case .D, .Cx, .Ebb: return 2
+        case .Eb, .Ds, .Csx: return 3
+        case .E , .Dx, .Fb: return 4
+        case .F, .Es, .Gbb: return 5
+        case .Gb, .Fs, .Ex: return 6
+        case .G, .Fx, .Abb: return 7
+        case .Ab, .Gs, .Fsx: return 8
+        case .A, .Gx, .Bbb: return 9
+        case .Bb, .As, .Gsx: return 10
+        case .B, .Ax, .Cb: return 11
+        }
     }
 
     /// A dictionary to map strings to PitchLetter cases.

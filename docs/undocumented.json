@@ -178,90 +178,258 @@
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
       "line": 18,
+      "symbol": "PitchLetter.Bs",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 18,
       "symbol": "PitchLetter.C",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
-      "line": 20,
+      "line": 18,
+      "symbol": "PitchLetter.Dbb",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 19,
+      "symbol": "PitchLetter.Bx",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 19,
+      "symbol": "PitchLetter.Cs",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 19,
       "symbol": "PitchLetter.Db",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
-      "line": 22,
+      "line": 20,
+      "symbol": "PitchLetter.Cx",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 20,
       "symbol": "PitchLetter.D",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
-      "line": 24,
+      "line": 20,
+      "symbol": "PitchLetter.Ebb",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 21,
+      "symbol": "PitchLetter.Csx",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 21,
+      "symbol": "PitchLetter.Ds",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 21,
       "symbol": "PitchLetter.Eb",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
-      "line": 26,
+      "line": 22,
+      "symbol": "PitchLetter.Dx",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 22,
       "symbol": "PitchLetter.E",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
-      "line": 28,
+      "line": 22,
+      "symbol": "PitchLetter.Fb",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 23,
+      "symbol": "PitchLetter.Es",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 23,
       "symbol": "PitchLetter.F",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
-      "line": 30,
+      "line": 23,
+      "symbol": "PitchLetter.Gbb",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 24,
+      "symbol": "PitchLetter.Ex",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 24,
+      "symbol": "PitchLetter.Fs",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 24,
       "symbol": "PitchLetter.Gb",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
-      "line": 32,
+      "line": 25,
+      "symbol": "PitchLetter.Abb",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 25,
+      "symbol": "PitchLetter.Fx",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 25,
       "symbol": "PitchLetter.G",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
-      "line": 34,
+      "line": 26,
       "symbol": "PitchLetter.Ab",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
-      "line": 36,
+      "line": 26,
+      "symbol": "PitchLetter.Fsx",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 26,
+      "symbol": "PitchLetter.Gs",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 27,
       "symbol": "PitchLetter.A",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
-      "line": 38,
+      "line": 27,
+      "symbol": "PitchLetter.Bbb",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 27,
+      "symbol": "PitchLetter.Gx",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 28,
+      "symbol": "PitchLetter.As",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 28,
       "symbol": "PitchLetter.Bb",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
-      "line": 40,
+      "line": 28,
+      "symbol": "PitchLetter.Gsx",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 29,
+      "symbol": "PitchLetter.Ax",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 29,
       "symbol": "PitchLetter.B",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
-      "line": 107,
+      "line": 29,
+      "symbol": "PitchLetter.Cb",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/CoreTools/NoteTools.swift",
+      "line": 108,
       "symbol": "Pitch.~=(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
@@ -471,70 +639,77 @@
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
-      "line": 114,
+      "line": 15,
+      "symbol": ">>-(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
+      "line": 101,
       "symbol": "Transformation.H",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
-      "line": 114,
+      "line": 101,
       "symbol": "Transformation.L",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
-      "line": 114,
+      "line": 101,
       "symbol": "Transformation.N",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
-      "line": 114,
+      "line": 101,
       "symbol": "Transformation.P",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
-      "line": 114,
+      "line": 101,
       "symbol": "Transformation.R",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
-      "line": 114,
+      "line": 101,
       "symbol": "Transformation.S",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
-      "line": 124,
+      "line": 111,
       "symbol": "ChordQuality.augmented",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
-      "line": 124,
+      "line": 111,
       "symbol": "ChordQuality.diminished",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
-      "line": 124,
+      "line": 111,
       "symbol": "ChordQuality.major",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nikhilsingh/MusicianKit/MusicianKit/OtherTools/TransformationalTools.swift",
-      "line": 124,
+      "line": 111,
       "symbol": "ChordQuality.minor",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
