@@ -25,7 +25,7 @@ open class Modes {
         public static let first = ionian, second = dorian, third = phrygian, fourth = lydian, fifth = mixolydian, sixth = aeolian, seventh = locrian
 
         /// Offsets-from-tonic for the current mode, as an array of Ints.
-        var offsets: [Int] {
+        public var offsets: [Int] {
             let baseType = KeyType.major.pattern
             return Modes.modalRotate(baseType, by: rawValue)
         }
